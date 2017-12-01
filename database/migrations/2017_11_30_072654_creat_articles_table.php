@@ -18,10 +18,8 @@ class CreatArticlesTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->longText('content');
-            $table->string('image');
             $table->string('thumbnail');
             $table->enum('hot',['1','0']);
-            $table->enum('new',['1','0']);
             $table->timestamps();
             $table->integer('category_id')->unsigned()->nullable(); //unsigned:Không âm; nullable:ko rỗng;
             $table->foreign('category_id')->references('id')->on('categories');
