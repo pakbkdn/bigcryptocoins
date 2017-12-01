@@ -14,7 +14,7 @@
 Route::get('/', 'PageController@getIndex');
 Route::get('article', 'PageController@getArticle');
 Route::get('detail', 'PageController@getDetail');
-Route::get('takizawa', 'AdminController@listArticle');
+Route::get('admin', 'AdminController@listArticle');
 
 Auth::routes();
 
