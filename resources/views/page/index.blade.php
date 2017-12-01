@@ -268,122 +268,7 @@
                                         <div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. Cumtipsu sociis natoque penatibus et magnis dis montesti, nascetur ridiculus mus. Donec quam…</div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!--News Block Two-->
-                            <div class="news-block-two with-margin col-md-6 col-sm-6 col-xs-12">
-                                <div class="inner-box">
-                                    <div class="image">
-                                        <a href="blog-single-2.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-22.jpg" alt="" /></a>
-                                        <div class="category"><a href="blog-single-2.html">fashion</a></div>
-                                    </div>
-                                    <div class="lower-box">
-                                        <h3><a href="blog-single-2.html">The Hyperloop dream just got one step closer to universal reality</a></h3>
-                                        <ul class="post-meta">
-                                            <li><span class="icon fa fa-clock-o"></span>March 03, 2016</li>
-                                            <li><span class="icon fa fa-comment-o"></span>4</li>
-                                            <li><span class="icon fa fa-eye"></span>1740</li>
-                                        </ul>
-                                        <div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. Cumtipsu sociis natoque penatibus et magnis dis montesti, nascetur ridiculus mus. Donec quam…</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--News Block Two-->
-                            <div class="news-block-two with-margin col-md-6 col-sm-6 col-xs-12">
-                                <div class="inner-box">
-                                    <div class="image">
-                                        <a href="blog-single-2.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-23.jpg" alt="" /></a>
-                                        <div class="category"><a href="blog-single-2.html">tech</a></div>
-                                    </div>
-                                    <div class="lower-box">
-                                        <h3><a href="blog-single-2.html">Elon Musk's Hyperloop vision races toward first public test</a></h3>
-                                        <ul class="post-meta">
-                                            <li><span class="icon fa fa-clock-o"></span>March 04, 2016</li>
-                                            <li><span class="icon fa fa-comment-o"></span>9</li>
-                                            <li><span class="icon fa fa-eye"></span>3970</li>
-                                        </ul>
-                                        <div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. Cumtipsu sociis natoque penatibus et magnis dis montesti, nascetur ridiculus mus. Donec quam…</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--News Block Two-->
-                            <div class="news-block-two with-margin col-md-6 col-sm-6 col-xs-12">
-                                <div class="inner-box">
-                                    <div class="image">
-                                        <a href="blog-single-2.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-24.jpg" alt="" /></a>
-                                        <div class="category"><a href="blog-single-2.html">Politics</a></div>
-                                    </div>
-                                    <div class="lower-box">
-                                        <h3><a href="blog-single-2.html">A modern day security strategy for your computer antivirus</a></h3>
-                                        <ul class="post-meta">
-                                            <li><span class="icon fa fa-clock-o"></span>March 05, 2016</li>
-                                            <li><span class="icon fa fa-comment-o"></span>9</li>
-                                            <li><span class="icon fa fa-eye"></span>7420</li>
-                                        </ul>
-                                        <div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. Cumtipsu sociis natoque penatibus et magnis dis montesti, nascetur ridiculus mus. Donec quam…</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--News Block Two-->
-                            <div class="news-block-two with-margin col-md-6 col-sm-6 col-xs-12">
-                                <div class="inner-box">
-                                    <div class="image">
-                                        <a href="blog-single-2.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-25.jpg" alt="" /></a>
-                                        <div class="category"><a href="blog-single-2.html">Business</a></div>
-                                    </div>
-                                    <div class="lower-box">
-                                        <h3><a href="blog-single-2.html">Fix an Exchange Rate now with a  New Business Forward Contract App</a></h3>
-                                        <ul class="post-meta">
-                                            <li><span class="icon fa fa-clock-o"></span>March 06, 2016</li>
-                                            <li><span class="icon fa fa-comment-o"></span>4</li>
-                                            <li><span class="icon fa fa-eye"></span>5740</li>
-                                        </ul>
-                                        <div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. Cumtipsu sociis natoque penatibus et magnis dis montesti, nascetur ridiculus mus. Donec quam…</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--News Block Two-->
-                            <div class="news-block-two with-margin col-md-6 col-sm-6 col-xs-12">
-                                <div class="inner-box">
-                                    <div class="image">
-                                        <a href="blog-single-2.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-38.jpg" alt="" /></a>
-                                        <div class="category"><a href="blog-single-2.html">Politics</a></div>
-                                    </div>
-                                    <div class="lower-box">
-                                        <h3><a href="blog-single-2.html">The Hyperloop dream just got one step closer to universal reality</a></h3>
-                                        <ul class="post-meta">
-                                            <li><span class="icon fa fa-clock-o"></span>March 07, 2016</li>
-                                            <li><span class="icon fa fa-comment-o"></span>7</li>
-                                            <li><span class="icon fa fa-eye"></span>7425</li>
-                                        </ul>
-                                        <div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. Cumtipsu sociis natoque penatibus et magnis dis montesti, nascetur ridiculus mus. Donec quam…</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!--News Block Two-->
-                            <div class="news-block-two with-margin col-md-6 col-sm-6 col-xs-12">
-                                <div class="inner-box">
-                                    <div class="image">
-                                        <a href="blog-single-2.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-39.jpg" alt="" /></a>
-                                        <div class="category"><a href="blog-single-2.html">Business</a></div>
-                                    </div>
-                                    <div class="lower-box">
-                                        <h3><a href="blog-single-2.html">Elon Musk's Hyperloop vision races toward first public test</a></h3>
-                                        <ul class="post-meta">
-                                            <li><span class="icon fa fa-clock-o"></span>March 07, 2016</li>
-                                            <li><span class="icon fa fa-comment-o"></span>7</li>
-                                            <li><span class="icon fa fa-eye"></span>7425</li>
-                                        </ul>
-                                        <div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. Cumtipsu sociis natoque penatibus et magnis dis montesti, nascetur ridiculus mus. Donec quam…</div>
-                                    </div>
-                                </div>
-                            </div>
-
+                            </div>                            
                         </div>
 
                         <!-- Styled Pagination -->
@@ -403,24 +288,6 @@
                 <div class="sidebar-side col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <aside class="sidebar default-sidebar right-sidebar">
 
-                        <!--Social Widget-->
-                        <div class="sidebar-widget sidebar-social-widget">
-                            <div class="sidebar-title">
-                                <h2>Follow Us</h2>
-                            </div>
-                            <ul class="social-icon-one alternate">
-                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                <li class="twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                <li class="g_plus"><a href="#"><span class="fa fa-google-plus"></span></a></li>
-                                <li class="linkedin"><a href="#"><span class="fa fa-linkedin-square"></span></a></li>
-                                <li class="pinteret"><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
-                                <li class="android"><a href="#"><span class="fa fa-android"></span></a></li>
-                                <li class="instagram"><a href="#"><span class="fa fa-instagram"></span></a></li>
-                                <li class="vimeo"><a href="#"><span class="fa fa-vimeo"></span></a></li>
-                            </ul>
-                        </div>
-                        <!--End Social Widget-->
-
                         <!-- Search -->
                         <div class="sidebar-widget search-box">
                             <form method="post" action="contact.html">
@@ -431,6 +298,17 @@
                             </form>
                         </div>
 
+                        <!--Social Widget-->
+                        <div class="sidebar-widget sidebar-social-widget">
+                            <div class="sidebar-title">
+                                <h2>Follow Us</h2>
+                            </div>
+                            <ul class="social-icon-one alternate">
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li class="twitter"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            </ul>
+                        </div>
+                        <!--End Social Widget-->
                         <!--Category Widget-->
                         <div class="sidebar-widget categories-widget">
                             <div class="sidebar-title">
@@ -438,167 +316,17 @@
                             </div>
                             <ul class="cat-list">
                                 <li class="clearfix"><a href="#">Travel <span>(30)</span></a></li>
-                                <li class="clearfix"><a href="#">Entertainment<span>(9)</span></a></li>
-                                <li class="clearfix"><a href="#">Sport<span>(13)</span></a></li>
-                                <li class="clearfix"><a href="#">Life Style<span>(70)</span></a></li>
-                                <li class="clearfix"><a href="#">Tech<span>(11)</span></a></li>
-                                <li class="clearfix"><a href="#">Money<span>(5)</span></a></li>
-                                <li class="clearfix"><a href="#">Photo<span>(14)</span></a></li>
                             </ul>
                         </div>
                         <!--End Category Widget-->
-
-                        <!--News Post Widget-->
-                        <div class="sidebar-widget posts-widget">
-
-                            <!--Product widget Tabs-->
-                            <div class="product-widget-tabs">
-                                <!--Product Tabs-->
-                                <div class="prod-tabs tabs-box">
-
-                                    <!--Tab Btns-->
-                                    <ul class="tab-btns tab-buttons clearfix">
-                                        <li data-tab="#prod-popular" class="tab-btn active-btn">Popular</li>
-                                        <li data-tab="#prod-recent" class="tab-btn">Recent</li>
-                                        <li data-tab="#prod-comment" class="tab-btn">Comments</li>
-                                    </ul>
-
-                                    <!--Tabs Container-->
-                                    <div class="tabs-content">
-
-                                        <!--Tab / Active Tab-->
-                                        <div class="tab active-tab" id="prod-popular">
-                                            <div class="content">
-
-                                                <article class="widget-post">
-                                                    <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/post-thumb-1.jpg" alt=""></a><div class="overlay"><span class="icon qb-play-arrow"></span></div></figure>
-                                                    <div class="text"><a href="blog-single.html">Priyanka Chopra got her what photoshopped?</a></div>
-                                                    <div class="post-info">April 01, 2016</div>
-                                                </article>
-
-                                                <article class="widget-post">
-                                                    <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/post-thumb-2.jpg" alt=""></a><div class="overlay"><span class="icon qb-play-arrow"></span></div></figure>
-                                                    <div class="text"><a href="blog-single.html">Jerry Seinfeld grabs coffee with Margaret Cho and it gets</a></div>
-                                                    <div class="post-info">April 02, 2016</div>
-                                                </article>
-
-                                                <article class="widget-post">
-                                                    <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/post-thumb-3.jpg" alt=""></a><div class="overlay"><span class="icon qb-play-arrow"></span></div></figure>
-                                                    <div class="text"><a href="blog-single.html">American Black Film Festival New projects from film TV</a></div>
-                                                    <div class="post-info">April 03, 2016</div>
-                                                </article>
-
-                                                <article class="widget-post">
-                                                    <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/post-thumb-4.jpg" alt=""></a><div class="overlay"><span class="icon qb-play-arrow"></span></div></figure>
-                                                    <div class="text"><a href="blog-single.html">Amy Schumer swaps lives with Anna Wintour</a></div>
-                                                    <div class="post-info">April 04, 2016</div>
-                                                </article>
-
-                                                <article class="widget-post">
-                                                    <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/post-thumb-9.jpg" alt=""></a><div class="overlay"><span class="icon qb-play-arrow"></span></div></figure>
-                                                    <div class="text"><a href="blog-single.html">Priyanka Chopra got her what photoshopped?</a></div>
-                                                    <div class="post-info">April 02, 2016</div>
-                                                </article>
-
-                                            </div>
-                                        </div>
-
-                                        <!--Tab-->
-                                        <div class="tab" id="prod-recent">
-                                            <div class="content">
-
-                                                <article class="widget-post">
-                                                    <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/post-thumb-2.jpg" alt=""></a><div class="overlay"><span class="icon qb-play-arrow"></span></div></figure>
-                                                    <div class="text"><a href="blog-single.html">Jerry Seinfeld grabs coffee with Margaret Cho and it gets</a></div>
-                                                    <div class="post-info">April 02, 2016</div>
-                                                </article>
-
-                                                <article class="widget-post">
-                                                    <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/post-thumb-3.jpg" alt=""></a><div class="overlay"><span class="icon qb-play-arrow"></span></div></figure>
-                                                    <div class="text"><a href="blog-single.html">American Black Film Festival New projects from film TV</a></div>
-                                                    <div class="post-info">April 03, 2016</div>
-                                                </article>
-
-                                            </div>
-                                        </div>
-
-                                        <!--Tab-->
-                                        <div class="tab" id="prod-comment">
-                                            <div class="content">
-
-                                                <article class="widget-post">
-                                                    <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/post-thumb-3.jpg" alt=""></a><div class="overlay"><span class="icon qb-play-arrow"></span></div></figure>
-                                                    <div class="text"><a href="blog-single.html">American Black Film Festival New projects from film TV</a></div>
-                                                    <div class="post-info">April 03, 2016</div>
-                                                </article>
-
-                                                <article class="widget-post">
-                                                    <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/post-thumb-4.jpg" alt=""></a><div class="overlay"><span class="icon qb-play-arrow"></span></div></figure>
-                                                    <div class="text"><a href="blog-single.html">Amy Schumer swaps lives with Anna Wintour</a></div>
-                                                    <div class="post-info">April 04, 2016</div>
-                                                </article>
-
-                                                <article class="widget-post">
-                                                    <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/post-thumb-1.jpg" alt=""></a><div class="overlay"><span class="icon qb-play-arrow"></span></div></figure>
-                                                    <div class="text"><a href="blog-single.html">Priyanka Chopra got her what photoshopped?</a></div>
-                                                    <div class="post-info">April 01, 2016</div>
-                                                </article>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <!--End Product Info Tabs-->
-
-                        </div>
-                        <!--End Post Widget-->
-
-                        <!--Cooment Widget-->
-                        <div class="sidebar-widget sidebar-comment-widget">
-                            <div class="sidebar-title">
-                                <h2>Recent Comments</h2>
-                            </div>
-                            <article class="widget-comment-post">
-                                <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/comment.jpg" alt=""></a></figure>
-                                <div class="text"><a href="blog-single.html">Priyanka Chopra got her what photoshopped?</a></div>
-                                <div class="post-info">April 01, 2016</div>
-                            </article>
-                            <article class="widget-comment-post">
-                                <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/comment.jpg" alt=""></a></figure>
-                                <div class="text"><a href="blog-single.html">Jerry Seinfeld grabs coffee with Cho and it gets</a></div>
-                                <div class="post-info">April 02, 2016</div>
-                            </article>
-                            <article class="widget-comment-post">
-                                <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/comment.jpg" alt=""></a></figure>
-                                <div class="text"><a href="blog-single.html">American Black Film Festival New projects from film TV</a></div>
-                                <div class="post-info">April 03, 2016</div>
-                            </article>
-                            <article class="widget-comment-post">
-                                <figure class="post-thumb"><a href="blog-single.html"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/comment.jpg" alt=""></a></figure>
-                                <div class="text"><a href="blog-single.html">Amy Schumer swaps lives with Anna Wintour</a></div>
-                                <div class="post-info">April 04, 2016</div>
-                            </article>
-                        </div>
-
-                        <!--NewsLetter Widget-->
-                        <div class="newsletter-widget no-margin-btm">
-                            <div class="inner-box">
-                                <h2>Subscribe to Newsletter</h2>
-                                <div class="emailed-form">
-                                    <form method="post" action="contact.html">
-                                        <div class="form-group">
-                                            <input type="email" name="email" value="" placeholder="Enter your email..." required>
-                                            <button type="submit" class="theme-btn">Subscribe!</button>
-                                        </div>
-                                    </form>
+                        <div class="sidebar-widget sidebar-adds-widget">
+                            <div class="adds-block" style="background-image:url(page/images/resource/add-image.jpg);">
+                                <div class="inner-box">
+                                    <div class="text">Advertisement <span> 340 x 283</span></div>
+                                    <a href="#" class="theme-btn btn-style-two">Purchase Now</a>
                                 </div>
                             </div>
                         </div>
-
                     </aside>
                 </div>
 
@@ -607,107 +335,4 @@
         </div>
     </div>
     <!--End Sidebar Page Container-->
-
-    <!--Blog Gallery-->
-    <section class="blog-gallery grey-bg">
-        <div class="auto-container">
-            <div class="row clearfix">
-
-                <div class="column pull-left col-md-3 col-sm-6 col-xs-12">
-
-                    <!--News Block Two-->
-                    <div class="news-block-two small-block">
-                        <div class="inner-box">
-                            <div class="image">
-                                <a href="#"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-33.jpg" alt="" /></a>
-                                <div class="category"><a href="#">Travel</a></div>
-                            </div>
-                            <div class="lower-box">
-                                <h3><a href="#">American Black Film Festival New projects from film TV</a></h3>
-                                <ul class="post-meta">
-                                    <li><span class="icon fa fa-clock-o"></span>April 03, 2016</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--News Block Two-->
-                    <div class="news-block-two small-block">
-                        <div class="inner-box">
-                            <div class="image">
-                                <a href="#"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-34.jpg" alt="" /></a>
-                                <div class="category"><a href="#">Travel</a></div>
-                            </div>
-                            <div class="lower-box">
-                                <h3><a href="#">Five of the displaced tenants filed a lawsuit against</a></h3>
-                                <ul class="post-meta">
-                                    <li><span class="icon fa fa-clock-o"></span>April 04, 2016</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="column pull-right col-md-3 col-sm-6 col-xs-12">
-
-                    <!--News Block Two-->
-                    <div class="news-block-two small-block">
-                        <div class="inner-box">
-                            <div class="image">
-                                <a href="#"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-35.jpg" alt="" /></a>
-                                <div class="category"><a href="#">Design</a></div>
-                            </div>
-                            <div class="lower-box">
-                                <h3><a href="#">New York state and Francisco are also close to cracking</a></h3>
-                                <ul class="post-meta">
-                                    <li><span class="icon fa fa-clock-o"></span>April 03, 2016</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--News Block Two-->
-                    <div class="news-block-two small-block">
-                        <div class="inner-box">
-                            <div class="image">
-                                <a href="#"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-36.jpg" alt="" /></a>
-                                <div class="category"><a href="#">style</a></div>
-                            </div>
-                            <div class="lower-box">
-                                <h3><a href="#">Critics of sites like Airbnb have long claimed that the remove</a></h3>
-                                <ul class="post-meta">
-                                    <li><span class="icon fa fa-clock-o"></span>April 06, 2016</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="column col-md-6 col-sm-12 col-xs-12">
-
-                    <!--News Block Seven-->
-                    <div class="news-block-seven style-two">
-                        <div class="inner-box">
-                            <div class="image">
-                                <a href="#"><img class="wow fadeIn" data-wow-delay="0ms" data-wow-duration="2500ms" src="page/images/resource/news-37.jpg" alt="" /></a>
-                                <div class="category"><a href="#">Fashion</a></div>
-                            </div>
-                            <div class="lower-box">
-                                <h3><a href="#">Wooden skyscrapers are springing up across the world universal</a></h3>
-                                <ul class="post-meta">
-                                    <li><span class="icon fa fa-clock-o"></span>March 26, 2016</li>
-                                    <li><span class="icon fa fa-comment-o"></span>9</li>
-                                    <li><span class="icon fa fa-eye"></span>7420</li>
-                                </ul>
-                                <div class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eget dolor. Aenean massa. Cumtipsu sociis natoque penatibus et magnis dis parturient montesti, nascetur ridiculus mus. Donec quam…</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!--End Blog Gallery-->
 @stop
