@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Quebec HTML Template | Home Style Six</title>
+        <title>BigCryptocoins</title>
         <!-- Stylesheets -->
         <link href="page/css/bootstrap.css" rel="stylesheet">
         <link href="page/css/style.css" rel="stylesheet">
