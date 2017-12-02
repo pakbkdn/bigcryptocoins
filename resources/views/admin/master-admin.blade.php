@@ -12,19 +12,31 @@
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('admin/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../admin/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="'{{asset('admin/vendor/metisMenu/metisMenu.min.css')}}'" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="../admin/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="{{asset('admin/dist/css/sb-admin-2.css')}}" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="../admin/vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="{{asset('admin/vendor/morrisjs/morris.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="../admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('admin/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+
+    <!-- DataTables CSS -->
+    <link href="{{asset('admin/vendor/datatables-plugins/dataTables.bootstrap.css')}}" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="{{asset('admin/vendor/datatables-responsive/dataTables.responsive.css')}}" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../admin/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../admin/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -295,7 +307,7 @@
                             <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                            <a href="{{ route('list-articles') }}"><i class="fa fa-edit fa-fw"></i> Articles</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
@@ -379,21 +391,49 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="../admin/vendor/jquery/jquery.min.js"></script>
+    <script src="{{asset('admin/vendor/jquery/jquery.min.js')}}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{asset('admin/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../admin/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="{{asset('admin/vendor/metisMenu/metisMenu.min.js')}}"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="../admin/vendor/raphael/raphael.min.js"></script>
-    <script src="../admin/vendor/morrisjs/morris.min.js"></script>
-    <script src="../admin/data/morris-data.js"></script>
+    <script src="{{asset('admin/vendor/raphael/raphael.min.js')}}"></script>
+    <script src="{{asset('admin/vendor/morrisjs/morris.min.js')}}"></script>
+    <script src="{{asset('admin/data/morris-data.js')}}"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="../admin/dist/js/sb-admin-2.js"></script>
+    <script src="{{asset('admin/dist/js/sb-admin-2.js')}}"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="{{asset('admin/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('admin/vendor/datatables-plugins/dataTables.bootstrap.min.js')}}"></script>
+    <script src="{{asset('admin/vendor/datatables-responsive/dataTables.responsive.js')}}"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../admin/admin/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../admin/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
 
 </body>
 
