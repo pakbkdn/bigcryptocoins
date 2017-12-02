@@ -38,6 +38,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
 
 </head>
 
@@ -403,8 +404,9 @@
 
     <!-- DataTables JavaScript -->
     <script src="../admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="../admin/admin/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../admin/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
     <script src="../admin/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
