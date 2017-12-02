@@ -32,6 +32,12 @@
     <!-- DataTables Responsive CSS -->
     <link href="{{asset('admin/vendor/datatables-responsive/dataTables.responsive.css')}}" rel="stylesheet">
 
+    <!-- DataTables CSS -->
+    <link href="../admin/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../admin/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -405,6 +411,20 @@
     <script src="{{asset('admin/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('admin/vendor/datatables-plugins/dataTables.bootstrap.min.js')}}"></script>
     <script src="{{asset('admin/vendor/datatables-responsive/dataTables.responsive.js')}}"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
+
+    <!-- DataTables JavaScript -->
+    <script src="../admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../admin/admin/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="../admin/vendor/datatables-responsive/dataTables.responsive.js"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
