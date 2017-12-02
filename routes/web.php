@@ -19,3 +19,6 @@ Route::get('takizawa', 'AdminController@listArticle');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Profile
+Route::get('/profile', 'UserController@updateAvarta' );
