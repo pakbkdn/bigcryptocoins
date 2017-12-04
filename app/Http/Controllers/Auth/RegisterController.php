@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -36,7 +36,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+
     }
 
     /**
@@ -52,8 +52,7 @@ class RegisterController extends Controller
             'username' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'password_confirmation' => 'required|same:password',
-            'phone_number' => 'required',
+            'password_confirmation' => 'required|same:password'
         ],
         [
             'username.required' => 'Please, enter the name',
@@ -63,8 +62,7 @@ class RegisterController extends Controller
             'password.required' => 'Please, enter password',
             'password_confirmation.required' => 'Please, confirm password',
             'password_confirmation.same' => 'Passwords are not the same',
-            'password.min' => 'Passwords are at least 6 characters long',
-            'phone_number.required' => 'Please, enter phone number'
+            'password.min' => 'Passwords are at least 6 characters long'
 
     ]);
     }
