@@ -14,6 +14,7 @@
 Route::get('/', 'PageController@getIndex');
 Route::get('article', 'PageController@getArticle');
 Route::get('detail', 'PageController@getDetail');
+Route::get('admin1', 'AdminController@dashboard');
 
 Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'article'],function(){
