@@ -18,7 +18,8 @@ Route::get('detail', 'PageController@getDetail');
 Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'article'],function(){
 		Route::get('list-articles', 'ArticleController@listArticle')->name('list-articles');
-		Route::get('add-articles', 'ArticleController@addArticle')->name('add-article');
+		Route::get('add-articles', 'ArticleController@getAddArticle')->name('add-article');
+		Route::post('add-articles', 'ArticleController@postAddArticle')->name('add-article');
         Route::get('edit-article/{id}', 'ArticleController@getEditArticle')->name('edit-article');
         Route::post('edit-article/{id}', 'ArticleController@postEditArticle')->name('edit-article');
         Route::get('delete-article/{id}', 'ArticleController@deleteArticle');
