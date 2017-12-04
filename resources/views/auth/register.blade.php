@@ -8,18 +8,18 @@
                 <div class="panel-heading">Register</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('register') }}" >
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+                        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+                            <label for="username" class="col-md-4 control-label">User name</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}" autofocus placeholder="Enter your name">
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('username'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('username') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -29,7 +29,7 @@
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Enter your email">
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -40,26 +40,57 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                              <label for="password" class="col-md-4 control-label">Password</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                              <div class="col-md-6">
+                                  <input id="password" type="password" class="form-control" name="password" placeholder="Enter your password">
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                                  @if ($errors->has('password'))
+                                      <span class="help-block">
+                                          <strong>{{ $errors->first('password') }}</strong>
+                                      </span>
+                                  @endif
+                              </div>
+                          </div>
+
+                          <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                              <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+
+                              <div class="col-md-6">
+                                  <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm password">
+
+                                  @if ($errors->has('password_confirmation'))
+                                      <span class="help-block">
+                                          <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                      </span>
+                                  @endif
+                              </div>
+                          </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                            <label for="password" class="col-md-4 control-label">Gender</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                              <input type="radio" name="gender" value="Male" checked> Male
+                              <input type="radio" name="gender" value="Female"> Female<br>
                             </div>
                         </div>
+
+                        <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
+                             <label for="phone" class="col-md-4 control-label">Phone</label>
+
+                             <div class="col-md-6">
+                                 <input id="phone_number" type="text" class="form-control" name="phone_number" value="{{ old('phone_number') }}" placeholder="Enter phone number">
+
+                                 @if ($errors->has('phone'))
+                                     <span class="help-block">
+                                         <strong>{{ $errors->first('phone') }}</strong>
+                                     </span>
+                                 @endif
+                             </div>
+                         </div>
+
+
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

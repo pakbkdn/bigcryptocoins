@@ -27,14 +27,16 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($articles as $article)
                             <tr class="odd gradeX">
-                                <td>Trident</td>
-                                <td>Internet Explorer 4.0</td>
-                                <td>Win 95+</td>
-                                <td class="center">4</td>
-                                <td class="center"><span class="glyphicon glyphicon-edit"></span></td>
-                                <td class="center"><span class="glyphicon glyphicon-trash"></span></td>
+                                <td>{{ $article ->id }}</td>
+                                <td>{{ $article ->title }}</td>
+                                <td><img src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="{{ $article ->title }}" style="width: 70px; height: 50px;"> </td>
+                                <td>{{ $article ->description }}</td>
+                                <td class="center"><a href="{{ url('admin/article/edit-article') }}/{{$article->id}}"><span class="glyphicon glyphicon-edit"></span></a> </td>
+                                <td class="center"><a href="{{url('admin/article/delete-article')}}/{{$article->id}}"><span class="glyphicon glyphicon-trash"></span></a> </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     <!-- /.table-responsive -->

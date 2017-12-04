@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -15,7 +14,6 @@ return [
     |            "sparkpost", "log", "array"
     |
     */
-
     'driver' => env('MAIL_DRIVER', 'smtp'),
 
     /*
@@ -56,9 +54,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
-    ],
+        'address' => 'bigcrytocoins@gmail.com', 'name' => 'Bigcrytocoins'],
 
     /*
     |--------------------------------------------------------------------------
@@ -84,9 +80,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => 'bigcrytocoins@gmail.com',
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => 'p123456789',
 
     /*
     |--------------------------------------------------------------------------

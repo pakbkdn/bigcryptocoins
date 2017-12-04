@@ -36,4 +36,24 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+
+        return Validator::make($data, [
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string|min:6|confirmed'
+        ],
+        [
+            'email.required' => 'Please enter the email',
+            'email.email' => 'Incorrect email format',
+            'password.required' => 'Please, enter password'
+    ]);
+    }
 }
