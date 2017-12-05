@@ -12,7 +12,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="row">
-                        <form role="form" action="{{url('admin/ads/edit-ads')}}/{{$ads->id}}" method="post" id="form" enctype="multipart/form-data">
+                        <form role="form" action="{{url('administrator/ads/edit-ads')}}/{{$ads->id}}" method="post" id="form" enctype="multipart/form-data">
                                 {!!csrf_field()!!}
                                 <div class="col-md-6">
                                     <div class="form-group">

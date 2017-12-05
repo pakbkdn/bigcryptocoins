@@ -13,7 +13,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    {!! Form::model($category,['url'=>'admin/category/'.$category->id,'method'=>'put']) !!}
+                                    {!! Form::model($category,['url'=>'administrator/category/'.$category->id,'method'=>'put']) !!}
                                         @include('admin.categories.form')
                                     {!! Form::close() !!}
                                 </div>
