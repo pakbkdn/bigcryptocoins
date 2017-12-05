@@ -54,7 +54,7 @@ class UserController extends Controller
                 'newpassword.min' => 'Passwords are at least 6 characters long',
                 'newpassword.required' => 'Please enter new password',
                 'repassword.required' => 'Please confirm password',
-                'repassword.same' => 'Passwords are not the same',
+                'repassword.same' => 'Password is not the same',
             ]
         );
             $user = Auth::user();

@@ -27,7 +27,7 @@ Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
         Route::get('delete-article/{id}', 'ArticleController@deleteArticle');
 	});
 	// Category
-	Route::group(['prefix'=>'category'],function(){
+	Route::group(['prefix'=>'category', 'middleware'=>'Admin'],function(){
 		Route::get('/','CategoryController@showCategories')->name('list-categories');
 		Route::get('/create','CategoryController@createCategory')->name('create-category');
 		Route::post('/','CategoryController@saveCategory');
@@ -35,7 +35,7 @@ Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
 		Route::put('/{category}','CategoryController@updateCategory');
 		Route::get('/{category}/delete','CategoryController@deleteCategory');
 	});
-	Route::group(['prefix'=>'ads'],function(){
+	Route::group(['prefix'=>'ads', 'middleware'=>'Admin'],function(){
 		Route::get('/', 'AdsController@listAds')->name('list-ads');
 		Route::get('add-ads', 'AdsController@getAddAds')->name('add-ads');
 		Route::post('add-ads', 'AdsController@postAddAds')->name('add-ads');
@@ -53,7 +53,7 @@ Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
 		Route::post('/change-password', 'UserController@savepass');
 	});
 	//manage User
-	Route::group(['prefix'=>'manage_user'], function(){
+	Route::group(['prefix'=>'manage_user', 'middleware'=>'Admin'], function(){
 		Route::get('/list_user', 'ManageUserController@listUser')->name('manageUser');
 		Route::get('/changeroles/{id}','ManageUserController@changeRoles');
 		Route::post('/editusers/{id}','ManageUserController@saveRoles');
