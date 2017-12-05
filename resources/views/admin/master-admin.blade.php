@@ -61,7 +61,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="{{url('admin1')}}">Bigcryptocoins</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -296,7 +296,7 @@
                             <a href="{{ route('list-articles') }}"><i class="fa fa-edit fa-fw"></i> Articles</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-list "></i> Categories<span class="fa arrow"></span></a>
+                            <a href="{{ route('list-categories') }}"><i class="fa fa-list "></i> Categories<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="panels-wells.html">Panels and Wells</a>
@@ -320,7 +320,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-map-o"></i> Advertisement</a>
+                            <a href="{{route('list-ads')}}"><i class="fa fa-map-o"></i> Advertisement</a>
                         </li>
                     </ul>
                 </div>

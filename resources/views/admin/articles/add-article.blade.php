@@ -38,10 +38,11 @@
                                      @endif
                                     <div class="form-group">
                                         <label>Thumbnail</label>
-                                        <input type="file" id="thumbnail" name="thumbnail" value="{{old('thumbnail')}}">
+                                        <input type="file" id="thumbnail1" name="thumbnail" value="{{old('thumbnail')}}"><br>
+                                        <img alt="" id="thumbnail" style="width: 100px; height: 100px;">
                                     </div>
                                     @if ($errors->has('thumbnail'))
-                                          <span class="help-block">
+                                          <span class="help-block" style="color:red;">
                                               <strong>{{ $errors->first('thumbnail') }}</strong>
                                           </span>
                                      @endif
@@ -50,7 +51,7 @@
                                         <textarea name="description" id="description"  class="form-control">{{old('description')}}</textarea>
                                     </div>
                                     @if ($errors->has('description'))
-                                          <span class="help-block">
+                                          <span class="help-block" style="color:red;">
                                               <strong>{{ $errors->first('description') }}</strong>
                                           </span>
                                      @endif
@@ -75,7 +76,7 @@
                                         <script>CKEDITOR.replace('content');</script>
                                     </div>
                                     @if ($errors->has('content'))
-                                          <span class="help-block">
+                                          <span class="help-block" style="color:red;">
                                               <strong>{{ $errors->first('content') }}</strong>
                                           </span>
                                      @endif
@@ -98,5 +99,17 @@
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
+    <script type="text/javascript">
+        document.getElementById("thumbnail1").onchange = function () {
+           var reader = new FileReader();
 
+           reader.onload = function (e) {
+               // get loaded data and render thumbnail.
+               document.getElementById("thumbnail").src = e.target.result;
+           };
+
+           // read the image file as a data URL.
+           reader.readAsDataURL(this.files[0]);
+           };
+    </script>
 @stop
