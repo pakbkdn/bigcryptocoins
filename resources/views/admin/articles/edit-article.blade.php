@@ -29,14 +29,29 @@
                                         <label>Title</label>
                                         <input type="text" name="title" id="title" class="form-control" value="{{$article->title}}">
                                     </div>
+                                    @if ($errors->has('title'))
+                                          <span class="help-block" style="color:red;">
+                                              <strong>{{ $errors->first('title') }}</strong>
+                                          </span>
+                                     @endif
                                     <div class="form-group">
                                         <label>Thumbnail</label>
                                         <input type="file" id="thumbnail" name="thumbnail" value="{{$article->thumbnail}}">
                                     </div>
+                                    @if ($errors->has('thumbnail'))
+                                          <span class="help-block" style="color:red;">
+                                              <strong>{{ $errors->first('thumbnail') }}</strong>
+                                          </span>
+                                     @endif
                                     <div class="form-group">
                                         <label>Description</label>
                                         <textarea name="description" id="description"  class="form-control">{{$article->description}}</textarea>
                                     </div>
+                                    @if ($errors->has('description'))
+                                          <span class="help-block" style="color:red;">
+                                              <strong>{{ $errors->first('description') }}</strong>
+                                          </span>
+                                     @endif
                                     <div class="form-group">
                                         <label>Hot News</label>
                                         <div class="radio">
@@ -57,6 +72,11 @@
                                         <textarea name="content" id="content"  class="form-control" rows="15">{{$article->content}}</textarea>
                                         <script>CKEDITOR.replace('content');</script>
                                     </div>
+                                    @if ($errors->has('content'))
+                                          <span class="help-block" style="color:red;">
+                                              <strong>{{ $errors->first('content') }}</strong>
+                                          </span>
+                                     @endif
 
                                 </div>
                                 <button type="submit" class="btn btn-success">Save</button>

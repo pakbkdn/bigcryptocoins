@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -45,21 +46,29 @@ class ArticleController extends Controller
             $file->move($destinationPath, $images);
             $addArticle->thumbnail = $images;
         }
-        else
-        {
-         $addArticle['thumbnail'] = '';
-        }
         $addArticle ->hot = $rq->input('hot');
         $addArticle ->save();
         return redirect()->route('list-articles');
     }
-    public function getEditArticle($id, Request $rq)
+    public function getEditArticle($id)
     {
         $article = Article::find($id);
         return view('admin.articles.edit-article', compact('article'));
     }
     public function postEditArticle($id, Request $rq)
     {
+        $this->validate($rq,
+        [
+            'title' => 'required',
+            'description' => 'required',
+            'content' => 'required',
+        ],
+        [
+            'title.required' => 'Title is required',
+            'description.required' => 'Description is required',
+            'content.required' => 'Content is required',
+        ]
+    );
         $editArticle = Article::find($id);
         $editArticle ->title = $rq->input('title');
         $editArticle ->description = $rq->input('description');
@@ -71,6 +80,8 @@ class ArticleController extends Controller
             $images = time()."_".$filename;
             $destinationPath = public_path('/page/images/thumbnail');
             $file->move($destinationPath, $images);
+            $oldfile = $editArticle->thumbnail;
+            Storage::delete($oldfile);
             $editArticle['thumbnail'] = $images;
         }
         $editArticle ->hot = $rq->input('hot');

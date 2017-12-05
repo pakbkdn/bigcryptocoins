@@ -2,7 +2,7 @@
 @section('content')
 <div class="body">
                               <h2 class="tttk"><b>Change password</b></h2><br>
-                              <form name="xuly" action="{{ url('admin/user/change-password') }}" method="post">
+                              <form name="xuly" action="{{ url('administrator/user/change-password') }}" method="post">
                                   {!!csrf_field()!!}
 
                                   <label class="lb" for=""><b>Enter the old password</b></label><span class="sp">*</span><br>

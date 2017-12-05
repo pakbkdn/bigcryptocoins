@@ -28,13 +28,21 @@ Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
 	});
 	// Category
 	Route::group(['prefix'=>'category'],function(){
-		Route::get('/','CategoryController@showCategories');
+		Route::get('/','CategoryController@showCategories')->name('list-categories');
 		Route::get('/create','CategoryController@createCategory')->name('create-category');
 		Route::post('/','CategoryController@saveCategory');
-
 		Route::get('/{category}/edit','CategoryController@editCategory');
 		Route::put('/{category}','CategoryController@updateCategory');
 		Route::get('/{category}/delete','CategoryController@deleteCategory');
+	});
+	Route::group(['prefix'=>'ads'],function(){
+		Route::get('/', 'AdsController@listAds')->name('list-ads');
+		Route::get('add-ads', 'AdsController@getAddAds')->name('add-ads');
+		Route::post('add-ads', 'AdsController@postAddAds')->name('add-ads');
+		Route::get('edit-ads/{id}', 'AdsController@getEditAds')->name('edit-ads');
+		Route::post('edit-ads/{id}', 'AdsController@postEditAds')->name('edit-ads');
+		Route::get('delete-ads/{id}', 'AdsController@deleteAds');
+
 	});
 	//Profile
 	Route::group(['prefix'=>'user'], function(){

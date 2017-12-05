@@ -24,7 +24,7 @@
        @endif
        <div class="box">
            <div class="box-body">
-               <form role="form" action="{{url('admin/user/editprofile')}}/{{$user->id}}" method="post" id="form">
+               <form role="form" action="{{url('administrator/user/editprofile')}}/{{$user->id}}" method="post" id="form">
                   {!!csrf_field()!!}
                    <div class="form-group">
                       <label for="user-name">User name</label>
