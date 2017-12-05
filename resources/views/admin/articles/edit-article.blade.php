@@ -12,19 +12,23 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="row">
-                        <form role="form" action="{{ url('admin/article/edit-article') }}/{{$article->id}}" method="post" id="form" enctype="multipart/form-data">
+                        <form role="form" action="{{ url('administrator/article/edit-article') }}/{{$article->id}}" method="post" id="form" enctype="multipart/form-data">
                                 {!!csrf_field()!!}
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label>Select category</label>
                                         <select class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                                <option value="">select category</option>
+                                            @foreach($categories as $category)
+                                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
+                                    @if ($errors->has('title'))
+                                          <span class="help-block" style="color:red;">
+                                              <strong>{{ $errors->first('title') }}</strong>
+                                          </span>
+                                     @endif
                                     <div class="form-group">
                                         <label>Title</label>
                                         <input type="text" name="title" id="title" class="form-control" value="{{$article->title}}">

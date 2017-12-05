@@ -13,7 +13,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    {!! Form::open(['url'=>'admin/category']) !!}
+                                    {!! Form::open(['url'=>'administrator/category']) !!}
                                         @include('admin.categories.form')
                                     {!! Form::close() !!}
                                 </div>
