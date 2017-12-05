@@ -1,7 +1,7 @@
 @extends('admin.master-admin')
 @section('content')
 <div class="body">
-                              <h2 class="tttk"><b>Đổi mật khẩu</b></h2><br>
+                              <h2 class="tttk"><b>Change password</b></h2><br>
                               <form name="xuly" action="{{ url('admin/user/change-password') }}" method="post">
                                   {!!csrf_field()!!}
 

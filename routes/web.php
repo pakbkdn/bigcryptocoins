@@ -14,9 +14,10 @@
 Route::get('/', 'PageController@getIndex')->name('home');
 Route::get('article', 'PageController@getArticle');
 Route::get('detail', 'PageController@getDetail');
-Route::get('administrator', 'AdminController@dashboard')->name('admin');
 
-Route::group(['prefix'=>'admin'],function(){
+
+Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
+	Route::get('/', 'AdminController@dashboard')->name('admin');
 	Route::group(['prefix'=>'article'],function(){
 		Route::get('list-articles', 'ArticleController@listArticle')->name('list-articles');
 		Route::get('add-articles', 'ArticleController@getAddArticle')->name('add-article');
@@ -24,7 +25,7 @@ Route::group(['prefix'=>'admin'],function(){
         Route::get('edit-article/{id}', 'ArticleController@getEditArticle')->name('edit-article');
         Route::post('edit-article/{id}', 'ArticleController@postEditArticle')->name('edit-article');
         Route::get('delete-article/{id}', 'ArticleController@deleteArticle');
-});
+	});
 	// Category
 	Route::group(['prefix'=>'category'],function(){
 		Route::get('/','CategoryController@showCategories');
