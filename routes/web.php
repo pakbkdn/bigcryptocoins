@@ -15,9 +15,9 @@ Route::get('/', 'PageController@getIndex')->name('home');
 Route::get('article', 'PageController@getArticle');
 Route::get('detail', 'PageController@getDetail');
 
-Route::group(['prefix'=>'administrator'],function(){
-	Route::get('/', 'AdminController@dashboard')->name('admin');
 
+Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
+	Route::get('/', 'AdminController@dashboard')->name('admin');
 	Route::group(['prefix'=>'article'],function(){
 		Route::get('list-articles', 'ArticleController@listArticle')->name('list-articles');
 		Route::get('add-articles', 'ArticleController@getAddArticle')->name('add-article');
@@ -52,5 +52,12 @@ Route::group(['prefix'=>'administrator'],function(){
 		Route::get('/changepass', 'UserController@chagepass');
 		Route::post('/change-password', 'UserController@savepass');
 	});
+	//manage User
+	Route::group(['prefix'=>'manage_user'], function(){
+		Route::get('/list_user', 'ManageUserController@listUser')->name('manageUser');
+		Route::get('/changeroles/{id}','ManageUserController@changeRoles');
+		Route::post('/editusers/{id}','ManageUserController@saveRoles');
+	});
+
 });
 Auth::routes();

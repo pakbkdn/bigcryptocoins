@@ -45,10 +45,14 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 </head>
 
 <body>
+    {!! Toastr::render() !!}
 
     <div id="wrapper">
 
@@ -113,6 +117,9 @@
                         </li>
                         <li>
                             <a href="{{url('administrator')}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="{{url('administrator/manage_user/list_user')}}"><i class="fa fa-user fa-fw"></i> Manage User</a>
                         </li>
                         <li>
                             <a href="{{ route('list-articles') }}"><i class="fa fa-edit fa-fw"></i> Articles</a>
