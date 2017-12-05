@@ -11,7 +11,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <a href="{{route('add-article')}}"><span class="glyphicon glyphicon-pencil"></span> Add Article</a>
+                    <a href="{{route('add-article')}}"class="btn btn-info"><i class="fa fa-plus"></i> Add Article</a>
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-body">
