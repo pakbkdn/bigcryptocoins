@@ -52,5 +52,12 @@ Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
 		Route::get('/changepass', 'UserController@chagepass');
 		Route::post('/change-password', 'UserController@savepass');
 	});
+	//manage User
+	Route::group(['prefix'=>'manage_user'], function(){
+		Route::get('/list_user', 'ManageUserController@listUser')->name('manageUser');
+		Route::get('/changeroles/{id}','ManageUserController@changeRoles');
+		Route::post('/editusers/{id}','ManageUserController@saveRoles');
+	});
+
 });
 Auth::routes();

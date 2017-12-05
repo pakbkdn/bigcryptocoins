@@ -45,10 +45,14 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 </head>
 
 <body>
+    {!! Toastr::render() !!}
 
     <div id="wrapper">
 
@@ -79,12 +83,12 @@
                             <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
-                            <li><a href="{{url('admin/user/profile')}}"><i class="fa fa-user fa-fw"></i> Edit Profile</a>
+                            <li><a href="{{url('administrator/user/profile')}}"><i class="fa fa-user fa-fw"></i> Edit Profile</a>
                             </li>
-                            <li><a href="{{url('admin/user/changepass')}}"><i class="fa fa-gear fa-fw"></i> Change Password</a>
+                            <li><a href="{{url('administrator/user/changepass')}}"><i class="fa fa-gear fa-fw"></i> Change Password</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="{{url('admin/user/logout')}}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="{{url('administrator/user/logout')}}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->
@@ -113,6 +117,9 @@
                         </li>
                         <li>
                             <a href="{{url('administrator')}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="{{url('administrator/manage_user/list_user')}}"><i class="fa fa-user fa-fw"></i> Manage User</a>
                         </li>
                         <li>
                             <a href="{{ route('list-articles') }}"><i class="fa fa-edit fa-fw"></i> Articles</a>
