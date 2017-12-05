@@ -18,8 +18,9 @@
                     <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
-                                <th>Article ID</th>
+                                <th>#</th>
                                 <th>Title</th>
+                                <th>Category</th>
                                 <th>Thumbnail</th>
                                 <th>Description</th>
                                 <th>Edit</th>
@@ -27,10 +28,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($articles as $article)
+                            @foreach($articles as $index=>$article)
                             <tr class="odd gradeX">
-                                <td>{{ $article ->id }}</td>
+                                <td>{{ $index++}}</td>
                                 <td>{{ $article ->title }}</td>
+                                <td>{{ $article ->Category->name }}</td>
                                 <td><img src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="{{ $article ->title }}" style="width: 70px; height: 50px;"> </td>
                                 <td>{{ $article ->description }}</td>
                                 <td class="center"><a href="{{ url('administrator/article/edit-article') }}/{{$article->id}}"><span class="glyphicon glyphicon-edit"></span></a> </td>
