@@ -18,15 +18,18 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label>Select category</label>
-                                        <select class="form-control">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
+                                        <select class="form-control" name="category">
+                                                <option value=""><b>Select category</b></option>
+                                            @foreach($categories as $category)
+                                                <option value="{{$category->id}}">{{$category -> name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
-
+                                    @if ($errors->has('category'))
+                                          <span class="help-block" style="color:red;">
+                                              <strong>{{ $errors->first('category') }}</strong>
+                                          </span>
+                                     @endif
                                     <div class="form-group">
                                         <label>Title</label>
                                         <input type="text" name="title" id="title" class="form-control" value="{{old('title')}}">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Category;
 use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
@@ -15,19 +16,22 @@ class ArticleController extends Controller
     }
     public function getAddArticle()
     {
-        return view('admin.articles.add-article');
+        $categories = Category::All();
+        return view('admin.articles.add-article', compact('categories'));
     }
     public function postAddArticle(Request $rq)
     {
         $this->validate($rq,
         [
             'title' => 'required',
+            'category' => 'required',
             'description' => 'required',
             'content' => 'required',
             'thumbnail' => 'required',
         ],
         [
             'title.required' => 'Title is required',
+            'category.required' => 'Category is required',
             'description.required' => 'Description is required',
             'content.required' => 'Content is required',
             'thumbnail.required' => 'Thumbnail is required',
@@ -35,6 +39,7 @@ class ArticleController extends Controller
     );
         $addArticle = new Article;
         $addArticle ->title = $rq->input('title');
+        $addArticle ->category_id = $rq->input('category');
         $addArticle ->description = $rq->input('description');
         $addArticle ->content = $rq->input('content');
         if($rq->hasFile('thumbnail'))
@@ -53,7 +58,8 @@ class ArticleController extends Controller
     public function getEditArticle($id)
     {
         $article = Article::find($id);
-        return view('admin.articles.edit-article', compact('article'));
+        $categories = Category::All();
+        return view('admin.articles.edit-article', compact('article', 'categories'));
     }
     public function postEditArticle($id, Request $rq)
     {
@@ -71,6 +77,10 @@ class ArticleController extends Controller
     );
         $editArticle = Article::find($id);
         $editArticle ->title = $rq->input('title');
+        if($rq->input('category')!= 0)
+        {
+            $editArticle ->category_id = $rq->input('category');
+        }
         $editArticle ->description = $rq->input('description');
         $editArticle ->content = $rq->input('content');
         if($rq->hasFile('thumbnail'))
