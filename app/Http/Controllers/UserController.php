@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use Hash;
+use Toastr;
 use App\User;
 use Illuminate\Support\MessageBag;
 
@@ -30,6 +31,7 @@ class UserController extends Controller
         $phone_number = $rq->input('phone_number');
             if ($phone_number != null) $data ->phone_number=$phone_number;
         $data->save();
+        Toastr::success('Edit successful user', $title = null, $options = []);
         return redirect('administrator');
     }
 
