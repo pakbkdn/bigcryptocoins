@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', 'PageController@getIndex');
+Route::get('/', 'PageController@getIndex')->name('home');
 Route::get('article', 'PageController@getArticle');
 Route::get('detail', 'PageController@getDetail');
-Route::get('admin1', 'AdminController@dashboard');
+Route::get('administrator', 'AdminController@dashboard')->name('admin');
 
 Route::group(['prefix'=>'admin'],function(){
 	Route::group(['prefix'=>'article'],function(){
@@ -25,7 +25,7 @@ Route::group(['prefix'=>'admin'],function(){
         Route::post('edit-article/{id}', 'ArticleController@postEditArticle')->name('edit-article');
         Route::get('delete-article/{id}', 'ArticleController@deleteArticle');
 });
-// Category
+	// Category
 	Route::group(['prefix'=>'category'],function(){
 		Route::get('/','CategoryController@showCategories')->name('list-categories');
 		Route::get('/create','CategoryController@createCategory')->name('create-category');
@@ -43,10 +43,12 @@ Route::group(['prefix'=>'admin'],function(){
 		Route::get('delete-ads/{id}', 'AdsController@deleteAds');
 
 	});
-});
+	//Profile
+	Route::group(['prefix'=>'user'], function(){
+		Route::get('/profile', 'UserController@updateProfile' );
+		Route::get('/logout', 'UserController@logout' );
+		Route::post('/editprofile/{id}', 'UserController@save');
+		Route::get('/changepass', 'UserController@chagepass');
+		Route::post('/change-password', 'UserController@savepass');
+	});
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-//Profile
-Route::get('/profile', 'UserController@updateAvarta' );
