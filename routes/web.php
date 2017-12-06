@@ -34,6 +34,7 @@ Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
 		Route::get('/{category}/edit','CategoryController@editCategory');
 		Route::put('/{category}','CategoryController@updateCategory');
 		Route::get('/{category}/delete','CategoryController@deleteCategory');
+		Route::get('/{id}', 'CategoryController@getArticleList');
 	});
 	Route::group(['prefix'=>'ads', 'middleware'=>'Admin'],function(){
 		Route::get('/', 'AdsController@listAds')->name('list-ads');
