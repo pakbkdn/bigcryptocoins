@@ -32,7 +32,7 @@
                                 <tr class="odd gradeX">
                                     <td>{{ $index++}}</td>
                                     <td>{{ $article ->title }}</td>
-                                    <td>{{ $article ->Category->name }}</td>
+                                    <td><a href="{{url('administrator/category/'.$article->category->id)}}">{{ $article ->Category->name }}</a></td>
                                     <td><img src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="{{ $article ->title }}" style="width: 70px; height: 50px;"> </td>
                                     <td>{{ $article ->description }}</td>
                                     <td class="center"><a href="{{ url('administrator/article/edit-article') }}/{{$article->id}}"><span class="glyphicon glyphicon-edit"></span></a> </td>

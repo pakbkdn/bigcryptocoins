@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
+use Toastr;
 use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
@@ -53,6 +54,7 @@ class ArticleController extends Controller
         }
         $addArticle ->hot = $rq->input('hot');
         $addArticle ->save();
+        Toastr::success('Add successful Article', $title = null, $options = []);
         return redirect()->route('list-articles');
     }
     public function getEditArticle($id)
@@ -96,6 +98,7 @@ class ArticleController extends Controller
         }
         $editArticle ->hot = $rq->input('hot');
         $editArticle ->update();
+        Toastr::success('Edit successful Article', $title = null, $options = []);
         return redirect()->route('list-articles');
     }
     public function deleteArticle($id)
