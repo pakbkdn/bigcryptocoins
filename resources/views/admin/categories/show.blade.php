@@ -28,7 +28,7 @@
                         	@foreach($categories as $index => $category)
                             <tr class="odd gradeX">
                             	<td>{{$index++}}</td>
-                            	<td>{{$category->name}}</td>
+                            	<td><a href="{{url('administrator/category/'.$category->id)}}">{{$category->name}} ({{$category->articles->count()}})</a></td>
                                 <td class="center"><a href="{{url('administrator/category/'.$category->id.'/edit')}}"><span class="glyphicon glyphicon-edit"></a></span></td>
                                 <td class="center"><a href="{{url('administrator/category/'.$category->id.'/delete')}}"><span class="glyphicon glyphicon-trash"></a></span></td>
                             </tr>
