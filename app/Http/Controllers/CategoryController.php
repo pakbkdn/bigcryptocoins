@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
+use Toastr;
 use App\Http\Requests\categoryRequest;
 
 class CategoryController extends Controller
@@ -23,6 +24,7 @@ class CategoryController extends Controller
     {
     	$data=Input::all();
     	$category = Category::create($data);
+        Toastr::success('Add successful Category', $title = null, $options = []);
     	return redirect('administrator/category');
     }
     public function editCategory(Category $category)
@@ -33,6 +35,7 @@ class CategoryController extends Controller
     {
         $data=Input::all();
         $category->update($data);
+        Toastr::success('Edit successful Category', $title = null, $options = []);
         return redirect('administrator/category');
     }
     public function deleteCategory($category)
@@ -45,7 +48,7 @@ class CategoryController extends Controller
     public function getArticleList($id)
     {
         $category = Category::find($id);
-        $articles = $category ->articles();
+        $articles = $category ->articles()->get();
         return view('admin.categories.articles', compact('category','articles'));
     }
 }

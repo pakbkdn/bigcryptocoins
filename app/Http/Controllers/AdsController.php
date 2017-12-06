@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Adv;
+use Toastr;
 
 class AdsController extends Controller
 {
@@ -55,6 +56,7 @@ class AdsController extends Controller
         }
         else
         $ads->save();
+        Toastr::success('Add successful Ads', $title = null, $options = []);
         return redirect()->route('list-ads');
     }
     public function getEditAds($id)
@@ -100,6 +102,7 @@ class AdsController extends Controller
         }
 
         $ads->update();
+        Toastr::success('Edit successful Ads', $title = null, $options = []);
         return redirect()->route('list-ads');
     }
     public function deleteAds($id)
