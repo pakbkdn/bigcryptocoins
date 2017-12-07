@@ -36,7 +36,7 @@
                                 <td><img src="{{asset('page/images/image1/'.$ad->image1)}}" alt="{{ $ad -> image1}}" style="width: 150px; height: 50px;"> </td>
                                 <td><img src="{{asset('page/images/image2/'.$ad->image2)}}" alt="{{ $ad -> image2}}" style="width: 50px; height: 50px;"> </td>
                                 <td class="center"><a href="{{url('administrator/ads/edit-ads')}}/{{$ad->id}}"><span class="glyphicon glyphicon-edit"></span></a> </td>
-                                <td class="center"><a href="{{url('administrator/ads/delete-ads')}}/{{$ad->id}}"><span class="glyphicon glyphicon-trash"></span></a> </td>
+                                <td class="center"><a href="{{url('administrator/ads/delete-ads')}}/{{$ad->id}}" onclick="return confirm('Are you sure ?');"><span class="glyphicon glyphicon-trash"></span></a> </td>
                             </tr>
                             @endforeach
                         </tbody>
