@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Adv;
+use Illuminate\Support\Facades\Storage;
 use Toastr;
 
 class AdsController extends Controller
@@ -47,14 +48,14 @@ class AdsController extends Controller
         }
         if($rq->hasFile('image2'))
         {
-            $file = $rq->file('image2');
-            $filename = $file->getClientOriginalName('image2');
-            $images = time()."_".$filename;
-            $destinationPath = public_path('/page/images/image2');
-            $file->move($destinationPath, $images);
-            $ads['image2'] = $images;
+            $file2 = $rq->file('image2');
+            $filename2 = $file2->getClientOriginalName('image2');
+            $images2 = time()."_".$filename2;
+            $destinationPath2 = public_path('/page/images/image2');
+            $file2->move($destinationPath2, $images2);
+            $ads['image2'] = $images2;
         }
-        else
+
         $ads->save();
         Toastr::success('Add successful Ads', $title = null, $options = []);
         return redirect()->route('list-ads');
@@ -88,6 +89,8 @@ class AdsController extends Controller
             $images = time()."_".$filename;
             $destinationPath = public_path('/page/images/image1');
             $file->move($destinationPath, $images);
+            $oldfile = $ads->image1;
+            Storage::delete($oldfile);
             $ads['image1'] = $images;
         }
 
@@ -98,6 +101,8 @@ class AdsController extends Controller
             $images2 = time()."_".$filename2;
             $destinationPath2 = public_path('/page/images/image2');
             $file2->move($destinationPath2, $images2);
+            $oldfile2 = $ads->image2;
+            Storage::delete($oldfile2);
             $ads['image2'] = $images2;
         }
 
