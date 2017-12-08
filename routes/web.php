@@ -18,7 +18,7 @@ Route::get('detail', 'PageController@getDetail');
 
 Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
 	Route::get('/', 'AdminController@dashboard')->name('admin');
-	Route::group(['prefix'=>'article'],function(){
+	Route::group(['prefix'=>'article','middleware'=>'Guest'],function(){
 		Route::get('list-articles', 'ArticleController@listArticle')->name('list-articles');
 		Route::get('add-articles', 'ArticleController@getAddArticle')->name('add-article');
 		Route::post('add-articles', 'ArticleController@postAddArticle')->name('add-article');
