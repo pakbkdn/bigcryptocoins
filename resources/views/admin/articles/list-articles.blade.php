@@ -36,7 +36,7 @@
                                     <td><img src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="{{ $article ->title }}" style="width: 70px; height: 50px;"> </td>
                                     <td>{{ $article ->description }}</td>
                                     <td class="center"><a href="{{ url('administrator/article/edit-article') }}/{{$article->id}}"><span class="glyphicon glyphicon-edit"></span></a> </td>
-                                    <td class="center"><a href="{{url('administrator/article/delete-article')}}/{{$article->id}}"><span class="glyphicon glyphicon-trash"></span></a> </td>
+                                    <td class="center"><a href="{{url('administrator/article/delete-article')}}/{{$article->id}}" onclick="return confirm('Are you sure ?');"><span class="glyphicon glyphicon-trash"></span></a> </td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -75,7 +75,7 @@
                                 <div class="col-lg-8">
                                     <div class="form-group">
                                         <h1>Content</h1>
-                                        <textarea name="content" id="content"  class="form-control" rows="15"></textarea>
+                                        <textarea name="content" id="content"  class="form-control" rows="15">{{old('content')}}</textarea>
                                         <script>CKEDITOR.replace('content');</script>
                                     </div>
                                     @if ($errors->has('content'))

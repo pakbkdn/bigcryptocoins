@@ -60,5 +60,7 @@ Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
 		Route::post('/editusers/{id}','ManageUserController@saveRoles');
 	});
 
+	route::get('deleteimage', 'AdminController@delete');
+
 });
 Auth::routes();

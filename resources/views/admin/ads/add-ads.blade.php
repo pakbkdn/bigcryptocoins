@@ -29,7 +29,7 @@
                                         <input type="text" id="link" name="link" class="form-control" value="{{old('link')}}">
                                     </div>
                                     @if ($errors->has('link'))
-                                          <span class="help-block">
+                                          <span class="help-block" style="color:red;">
                                               <strong>{{ $errors->first('link') }}</strong>
                                           </span>
                                      @endif
