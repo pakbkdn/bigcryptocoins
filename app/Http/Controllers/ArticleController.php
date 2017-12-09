@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
+use Auth;
 use Toastr;
 use Illuminate\Support\Facades\Storage;
 
@@ -12,7 +13,18 @@ class ArticleController extends Controller
 {
     public function listArticle()
     {
-        $articles = Article::orderBy('id','desc')->get();
+        switch (Auth::user()->roles) {
+            case '0':
+                $articles =Article::where('user_id', Auth::id())->get();
+                break;
+            case '1':
+                $articles =Article::where('user_id', Auth::id())->get();
+                break;
+
+            default:
+                $articles = Article::orderBy('id','desc')->get();
+                break;
+        }
         return view('admin.articles.list-articles', compact('articles'));
     }
     public function getAddArticle()
@@ -43,6 +55,7 @@ class ArticleController extends Controller
         $addArticle ->category_id = $rq->input('category');
         $addArticle ->description = $rq->input('description');
         $addArticle ->content = $rq->input('content');
+        $addArticle ->user_id = Auth::id();
         if($rq->hasFile('thumbnail'))
         {
             $file = $rq->file('thumbnail');
@@ -93,7 +106,7 @@ class ArticleController extends Controller
             $destinationPath = public_path('/page/images/thumbnail');
             $file->move($destinationPath, $images);
             $oldfile = $editArticle->thumbnail;
-            Storage::delete($oldfile);
+            Storage::delete('/page/images/thumbnail/1512545922_anh phuong.jpg');
             $editArticle['thumbnail'] = $images;
         }
         $editArticle ->hot = $rq->input('hot');

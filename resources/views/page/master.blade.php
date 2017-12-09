@@ -18,6 +18,7 @@
         <link rel="stylesheet" type="text/css" href="{{asset('page/css/owl.theme.css')}}" media="screen">
     	<link rel="stylesheet" type="text/css" href="{{asset('page/css/ticker-style.css')}}"/>
     	<link rel="stylesheet" type="text/css" href="{{asset('page/css/style.css')}}" media="screen">
+        <link rel="stylesheet" type="text/css" href="{{asset('page/css/common.css')}}"/>
 
         <script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
         <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
