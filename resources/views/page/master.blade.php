@@ -2,7 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
+        @if(isset($article))
+        <title>{{$article->title}}</title>
+        @else
         <title>BigCryptocoins</title>
+        @endif
         <link rel="icon" href="{{asset('page/images/logo.ico')}}" type="image/x-icon">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
