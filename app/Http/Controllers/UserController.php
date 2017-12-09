@@ -36,10 +36,8 @@ class UserController extends Controller
     }
 
     public function chagepass(){
-
         return view('admin.user.changepassword');
     }
-
     public function savepass(request $rq)
         {
             $this->validate($rq,
@@ -61,6 +59,7 @@ class UserController extends Controller
             if(Hash::check($rq ->input('oldpassword'), Auth::user() ->password )){
                 $user ->password = bcrypt($rq ->input('newpassword'));
                 $user->save();
+                Toastr::success('Change Password successful', $title = null, $options = []);
                 return redirect('administrator');
             }
             if(!(Hash::check($rq ->input('oldpassword'), Auth::user() ->password ))){

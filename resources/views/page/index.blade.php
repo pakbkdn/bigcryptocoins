@@ -6,12 +6,12 @@
 
     <div class="iso-call heading-news-box">
 
-        <div class="news-post image-post default-size">
-            <img src="{{asset('page/upload/news-posts/h1.jpg')}}" alt="">
+        <div class="news-post image-post default-size nxp">
+            <img src="page/images/thumbnail/{{$article_new->thumbnail}}" alt="img new">
             <div class="hover-box">
                 <div class="inner-hover">
-                    <a class="category-post travel" href="travel.html">Travel</a>
-                    <h2><a href="single-post.html">Lorem ipsum dolor sit amet, consectetuer</a></h2>
+                    <a class="category-post travel" href="travel.html">NEW</a>
+                    <h2><a href="single-post.html">{{$article_new->	title}}</a></h2>
                     <ul class="post-tags">
                         <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
                         <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
@@ -22,69 +22,36 @@
         </div>
 
         <div class="image-slider snd-size">
-            <span class="top-stories">TOP STORIES</span>
+            <span class="top-stories">Hot Article</span>
             <ul class="bxslider">
-                <li>
-                    <div class="news-post image-post">
-                        <img src="{{asset('page/upload/news-posts/h2.jpg')}}" alt="">
-                        <div class="hover-box">
-                            <div class="inner-hover">
-                                <a class="category-post world" href="world.html">Business</a>
-                                <h2><a href="single-post.html">Franca do të bashkëpunojë me Kosovën në ekonomi. </a></h2>
-                                <ul class="post-tags">
-                                    <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
-                                    <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                                    <li><i class="fa fa-eye"></i>872</li>
-                                </ul>
+                @foreach($article_hot as $article_hot)
+                    <li>
+                        <div class="news-post image-post nxpsl">
+                            <img src="page/images/thumbnail/{{$article_hot->thumbnail}}" alt="">
+                            <div class="hover-box">
+                                <div class="inner-hover">
+                                    <a class="category-post world" href="world.html">Business</a>
+                                    <h2><a href="single-post.html">{{$article_hot->title}}</a></h2>
+                                    <ul class="post-tags">
+                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                                        <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
+                                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+                                        <li><i class="fa fa-eye"></i>872</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="news-post image-post">
-                        <img src="{{asset('page/upload/news-posts/h7.jpg')}}" alt="">
-                        <div class="hover-box">
-                            <div class="inner-hover">
-                                <a class="category-post sport" href="sport.html">Sport</a>
-                                <h2><a href="single-post.html">Phasellus ultrices nulla quis nibh. Quisque a lectus. </a></h2>
-                                <ul class="post-tags">
-                                    <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
-                                    <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                                    <li><i class="fa fa-eye"></i>872</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="news-post image-post">
-                        <img src="{{asset('page/upload/news-posts/h4.jpg')}}" alt="">
-                        <div class="hover-box">
-                            <div class="inner-hover">
-                                <a class="category-post sport" href="sport.html">sport</a>
-                                <h2><a href="single-post.html">Donec odio. Quisque volutpat mattis eros. </a></h2>
-                                <ul class="post-tags">
-                                    <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
-                                    <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                                    <li><i class="fa fa-eye"></i>872</li>
-                                </ul>
-                                <p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                @endforeach
             </ul>
         </div>
 
-        <div class="news-post image-post">
-            <img src="{{asset('page/upload/news-posts/h3.jpg')}}" alt="">
+        <div class="news-post image-post nxp">
+            <img src="page/images/thumbnail/{{$article_analysis->thumbnail}}"  alt="">
             <div class="hover-box">
                 <div class="inner-hover">
-                    <a class="category-post food" href="food.html">food &amp; Health</a>
-                    <h2><a href="single-post.html">Nullam malesuada erat ut turpis.</a></h2>
+                    <a class="category-post food" href="food.html">ANALYSIS</a>
+                    <h2><a href="single-post.html">{{$article_analysis->	title}}</a></h2>
                     <ul class="post-tags">
                         <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
                         <li><a href="#"><i class="fa fa-comments-o"></i><span>20</span></a></li>
@@ -94,12 +61,12 @@
             </div>
         </div>
 
-        <div class="news-post image-post">
-            <img src="{{asset('page/upload/news-posts/h1.jpg')}}" alt="">
+        <div class="news-post image-post nxp">
+            <img src="page/images/thumbnail/{{$article_ico->thumbnail}}" alt="">
             <div class="hover-box">
                 <div class="inner-hover">
-                    <a class="category-post travel" href="travel.html">Travel</a>
-                    <h2><a href="single-post.html">Lorem ipsum dolor sit amet, consectetuer</a></h2>
+                    <a class="category-post travel" href="travel.html">ICO</a>
+                    <h2><a href="single-post.html">{{$article_ico->	title}}</a></h2>
                     <ul class="post-tags">
                         <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
                         <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
@@ -109,12 +76,42 @@
             </div>
         </div>
 
-        <div class="news-post image-post">
-            <img src="{{asset('page/upload/news-posts/h5.jpg')}}" alt="">
+        <div class="news-post image-post nxp">
+            <img src="page/images/thumbnail/{{$article_bitcoin->thumbnail}}" alt="">
             <div class="hover-box">
                 <div class="inner-hover">
-                    <a class="category-post sport" href="sport.html">sport</a>
-                    <h2><a href="single-post.html">Donec odio. </a></h2>
+                    <a class="category-post sport" href="sport.html">bit coin</a>
+                    <h2><a href="single-post.html">{{$article_bitcoin->	title}}</a></h2>
+                    <ul class="post-tags">
+                        <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
+                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+                    </ul>
+                    <p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-post image-post nxp">
+            <img src="page/images/thumbnail/{{$article_ethererum->thumbnail}}" alt="">
+            <div class="hover-box">
+                <div class="inner-hover">
+                    <a class="category-post fashion" href="fashion.html">ethererum</a>
+                    <h2><a href="single-post.html">{{$article_ethererum->	title}}</a></h2>
+                    <ul class="post-tags">
+                        <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
+                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+                    </ul>
+                    <p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-post image-post nxp">
+            <img src="page/images/thumbnail/{{$article_altcoin->thumbnail}}" alt="">
+            <div class="hover-box">
+                <div class="inner-hover">
+                    <a class="category-post sport" href="sport.html">altcoins</a>
+                    <h2><a href="single-post.html">{{$article_altcoin->	title}}</a></h2>
                     <ul class="post-tags">
                         <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
                         <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
@@ -128,37 +125,7 @@
             <img src="{{asset('page/upload/news-posts/h6.jpg')}}" alt="">
             <div class="hover-box">
                 <div class="inner-hover">
-                    <a class="category-post fashion" href="fashion.html">fashion</a>
-                    <h2><a href="single-post.html">Quisque volutpat mattis </a></h2>
-                    <ul class="post-tags">
-                        <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
-                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                    </ul>
-                    <p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="news-post image-post">
-            <img src="{{asset('page/upload/news-posts/h5.jpg')}}" alt="">
-            <div class="hover-box">
-                <div class="inner-hover">
-                    <a class="category-post sport" href="sport.html">sport</a>
-                    <h2><a href="single-post.html">Donec odio. </a></h2>
-                    <ul class="post-tags">
-                        <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
-                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                    </ul>
-                    <p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="news-post image-post">
-            <img src="{{asset('page/upload/news-posts/h6.jpg')}}" alt="">
-            <div class="hover-box">
-                <div class="inner-hover">
-                    <a class="category-post fashion" href="fashion.html">fashion</a>
+                    <a class="category-post fashion" href="fashion.html">ETHERERUM</a>
                     <h2><a href="single-post.html">Quisque volutpat mattis </a></h2>
                     <ul class="post-tags">
                         <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
@@ -173,7 +140,7 @@
             <img src="{{asset('page/upload/news-posts/h3.jpg')}}" alt="">
             <div class="hover-box">
                 <div class="inner-hover">
-                    <a class="category-post food" href="food.html">food &amp; Health</a>
+                    <a class="category-post food" href="food.html">ALTCOINS</a>
                     <h2><a href="single-post.html">Nullam malesuada erat ut turpis.</a></h2>
                     <ul class="post-tags">
                         <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
@@ -217,56 +184,10 @@
                         </ul>
                     </div>
                 </div>
-
-                <div class="item news-post standard-post">
-                    <div class="post-gallery">
-                        <img src="{{asset('page/upload/news-posts/st2.jpg')}}" alt="">
-                        <a class="category-post sport" href="sport.html">Sport</a>
-                    </div>
-                    <div class="post-content">
-                        <h2><a href="single-post.html">Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</a></h2>
-                        <ul class="post-tags">
-                            <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
-                            <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="item news-post standard-post">
-                    <div class="post-gallery">
-                        <img src="{{asset('page/upload/news-posts/st3.jpg')}}" alt="">
-                        <a class="category-post food" href="food.html">Food &amp; Health</a>
-                    </div>
-                    <div class="post-content">
-                        <h2><a href="single-post.html">Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</a></h2>
-                        <ul class="post-tags">
-                            <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
-                            <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="item news-post standard-post">
-                    <div class="post-gallery">
-                        <img src="{{asset('page/upload/news-posts/st4.jpg')}}" alt="">
-                        <a class="category-post sport" href="sport.html">Sport</a>
-                    </div>
-                    <div class="post-content">
-                        <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. </a></h2>
-                        <ul class="post-tags">
-                            <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
-                            <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-
                 <div class="item news-post standard-post">
                     <div class="post-gallery">
                         <img src="{{asset('page/upload/news-posts/st1.jpg')}}" alt="">
-                        <a class="category-post travel" href="travel.html">Travel</a>
+                        <a class="category-post world" href="world.html">Music</a>
                     </div>
                     <div class="post-content">
                         <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
@@ -277,6 +198,64 @@
                         </ul>
                     </div>
                 </div>
+                <div class="item news-post standard-post">
+                    <div class="post-gallery">
+                        <img src="{{asset('page/upload/news-posts/st1.jpg')}}" alt="">
+                        <a class="category-post world" href="world.html">Music</a>
+                    </div>
+                    <div class="post-content">
+                        <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
+                        <ul class="post-tags">
+                            <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                            <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
+                            <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item news-post standard-post">
+                    <div class="post-gallery">
+                        <img src="{{asset('page/upload/news-posts/st1.jpg')}}" alt="">
+                        <a class="category-post world" href="world.html">Music</a>
+                    </div>
+                    <div class="post-content">
+                        <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
+                        <ul class="post-tags">
+                            <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                            <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
+                            <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item news-post standard-post">
+                    <div class="post-gallery">
+                        <img src="{{asset('page/upload/news-posts/st1.jpg')}}" alt="">
+                        <a class="category-post world" href="world.html">Music</a>
+                    </div>
+                    <div class="post-content">
+                        <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
+                        <ul class="post-tags">
+                            <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                            <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
+                            <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item news-post standard-post">
+                    <div class="post-gallery">
+                        <img src="{{asset('page/upload/news-posts/st1.jpg')}}" alt="">
+                        <a class="category-post world" href="world.html">Music</a>
+                    </div>
+                    <div class="post-content">
+                        <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
+                        <ul class="post-tags">
+                            <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                            <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
+                            <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
 
             </div>
         </div>
