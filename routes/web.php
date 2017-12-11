@@ -13,7 +13,7 @@
 
 Route::get('/', 'PageController@getIndex')->name('home');
 Route::get('article', 'PageController@getArticle');
-Route::get('{id}&{category_id}', 'PageController@getDetail');
+Route::get('{id}', 'PageController@getDetail');
 
 
 Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
@@ -60,7 +60,6 @@ Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
 		Route::post('/editusers/{id}','ManageUserController@saveRoles');
 	});
 
-	route::get('deleteimage', 'AdminController@delete');
 
 });
 Auth::routes();

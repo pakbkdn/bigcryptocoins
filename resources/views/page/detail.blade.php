@@ -164,11 +164,11 @@
                                     <h1><span>Relative news</span></h1>
                                 </div>
                                 <div class="owl-carousel" data-num="3">
-                                    @foreach($articles as $article)
+                                    @foreach($relatives as $re)
                                         <div class="item news-post image-post3">
-                                        <img src="page/images/thumbnail/{{$article->thumbnail}}" alt="">
+                                        <img src="page/images/thumbnail/{{$re->thumbnail}}" alt="">
                                         <div class="hover-box">
-                                            <h2><a href="single-post.html">{{$article->title}}</a></h2>
+                                            <h2><a href="single-post.html">{{$re->title}}</a></h2>
                                             <ul class="post-tags">
                                                 <li><i class="fa fa-clock-o"></i>27 may 2013</li>
                                             </ul>

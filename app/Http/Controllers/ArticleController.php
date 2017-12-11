@@ -52,6 +52,7 @@ class ArticleController extends Controller
     );
         $addArticle = new Article;
         $addArticle ->title = $rq->input('title');
+        $addArticle ->alias = str_slug($rq->input('title'));
         $addArticle ->category_id = $rq->input('category');
         $addArticle ->description = $rq->input('description');
         $addArticle ->content = $rq->input('content');

@@ -20,9 +20,9 @@ class PageController extends Controller
         $article_hot = Article::orderBy('id', 'desc')->limit(3)->get();
         // $article_new = Article::orderBy('id', 'desc')->limit(2)->get();
 
-        return view('page.index', compact(['categories', 'article_new', 'article_analysis',
+        return view('page.index', compact('categories', 'article_new', 'article_analysis',
     'article_ico', 'article_bitcoin', 'article_ethererum', 'article_altcoin', 'article_mining',
-    'article_hot', 'article_new' ]));
+    'article_hot', 'article_new' ));
     }
 
     public function getArticle()
@@ -30,10 +30,10 @@ class PageController extends Controller
         return view('page.articles');
     }
 
-    public function getDetail($id, $category_id)
+    public function getDetail($id)
     {
         $article = Article::Find($id);
-        $articles =  Article::where('category_id', $category_id)->get();
-        return view('page.detail', compact('article', 'articles' ));
+        $relatives =  Article::where('category_id',$article->Category->id)->get();
+        return view('page.detail', compact('article', 'relatives' ));
     }
 }
