@@ -134,185 +134,29 @@
 
 
                     <!-- carousel box -->
-                    <div class="carousel-box owl-wrapper">
+                    @foreach($categories as $category)
+                        <div class="carousel-box owl-wrapper">
                         <div class="title-section">
-                            <h1><span>Gallery</span></h1>
+                            <h1><span>{{ $category->name }}</span></h1>
                         </div>
                         <div class="owl-carousel" data-num="3">
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal1.jpg')}}" alt="">
+                            @foreach( $category->articles as $article)
+                                <div class="item news-post image-post3 nxp_is_category">
+                                <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
                                 <div class="hover-box">
-                                    <h2><a href="single-post.html">Donec odio. Quisque volutpat mattis eros.</a></h2>
+                                    <h2><a href="single-post.html">{{ $article->title}}</a></h2>
                                     <ul class="post-tags">
                                         <li><i class="fa fa-clock-o"></i>27 may 2013</li>
                                     </ul>
                                 </div>
                             </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal2.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Nullam malesuada erat ut turpis. </a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal3.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Suspendisse urna nibh.</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal4.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Donec nec justo eget felis facilisis fermentum. Aliquam </a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal1.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Donec odio. Quisque volutpat mattis eros.</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            @endforeach
 
                         </div>
                     </div>
+                    @endforeach
                     <!-- End carousel box -->
-                    <!-- carousel box -->
-                    <div class="carousel-box owl-wrapper">
-                        <div class="title-section">
-                            <h1><span>Gallery</span></h1>
-                        </div>
-                        <div class="owl-carousel" data-num="3">
 
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal1.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Donec odio. Quisque volutpat mattis eros.</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal2.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Nullam malesuada erat ut turpis. </a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal3.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Suspendisse urna nibh.</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal4.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Donec nec justo eget felis facilisis fermentum. Aliquam </a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal1.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Donec odio. Quisque volutpat mattis eros.</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- End carousel box -->
-                    <!-- carousel box -->
-                    <div class="carousel-box owl-wrapper">
-                        <div class="title-section">
-                            <h1><span>Gallery</span></h1>
-                        </div>
-                        <div class="owl-carousel" data-num="3">
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal1.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Donec odio. Quisque volutpat mattis eros.</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal2.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Nullam malesuada erat ut turpis. </a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal3.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Suspendisse urna nibh.</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal4.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Donec nec justo eget felis facilisis fermentum. Aliquam </a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="item news-post image-post3">
-                                <img src="{{asset('page/upload/news-posts/gal1.jpg')}}" alt="">
-                                <div class="hover-box">
-                                    <h2><a href="single-post.html">Donec odio. Quisque volutpat mattis eros.</a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- End carousel box -->
 
 
                     <!-- google addsense -->
