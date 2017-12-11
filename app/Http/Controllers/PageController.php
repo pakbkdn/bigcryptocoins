@@ -10,19 +10,14 @@ class PageController extends Controller
     public function getIndex()
     {
         $categories = Category::all();
-        $article_new = Article::where('category_id','4')->first();
-        $article_analysis = Article::where('category_id','5')->first();
-        $article_ico = Article::where('category_id','6')->first();
-        $article_bitcoin = Article::where('category_id','7')->first();
-        $article_ethererum = Article::where('category_id','8')->first();
-        $article_altcoin = Article::where('category_id','9')->first();
-        $article_mining = Article::where('category_id','10')->first();
+        $articles = array();
+        foreach($categories as $category){
+            $article = Article::where('category_id',$category->id)->orderBy('id', 'desc')->first();
+            $articles[] = $article;
+        }
         $article_hot = Article::orderBy('id', 'desc')->limit(3)->get();
-        // $article_new = Article::orderBy('id', 'desc')->limit(2)->get();
-
-        return view('page.index', compact(['categories', 'article_new', 'article_analysis',
-    'article_ico', 'article_bitcoin', 'article_ethererum', 'article_altcoin', 'article_mining',
-    'article_hot', 'article_new' ]));
+        $article_top10 = Article::orderBy('id', 'desc')->limit(7)->get();
+        return view('page.index', compact(['categories', 'articles', 'article_hot', 'article_top10' ]));
     }
 
     public function getArticle()
