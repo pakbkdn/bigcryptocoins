@@ -1,10 +1,9 @@
-@extends('layouts.app')
-
+@extends('admin.master-admin')
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
+        <div class="col-md-8 col-md-offset-1">
+            <div class="panel panel-default" style="margin-top: 50px;">
                 <div class="panel-heading">Login</div>
 
                 <div class="panel-body">
