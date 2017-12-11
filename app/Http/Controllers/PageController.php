@@ -17,6 +17,10 @@ class PageController extends Controller
         }
         $article_hot = Article::orderBy('id', 'desc')->limit(3)->get();
         $article_top10 = Article::orderBy('id', 'desc')->limit(7)->get();
+        // foreach($categories as $category){
+        //     $articles1 = $category->articles->orderBy('id'.'desc')->limit(5);
+        //     dd($articles1);
+        // }
         return view('page.index', compact(['categories', 'articles', 'article_hot', 'article_top10' ]));
     }
 
