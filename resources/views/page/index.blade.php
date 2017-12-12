@@ -28,11 +28,11 @@
                             </div>
                         </div>
                     @endforeach
-                @endif
+             @endif
             </ul>
         </div>
         @if(isset($articles))
-            @foreach($articles as $article)
+            @foreach($article_couser as $article)
                 <div class="news-post image-post default-size nxp">
                 <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
                 <div class="hover-box">
@@ -49,37 +49,6 @@
             </div>
             @endforeach
         @endif
-
-        <div class="news-post image-post default-size nxp">
-            <img src="{{asset('page/upload/news-posts/h1.jpg')}}" alt="">
-            <div class="hover-box">
-                <div class="inner-hover">
-                    <a class="category-post travel" href="travel.html">Travel</a>
-                    <h2><a href="single-post.html">Lorem ipsum dolor sit amet, consectetuer</a></h2>
-                    <ul class="post-tags">
-                        <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
-                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                    </ul>
-                    <p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="news-post image-post default-size nxp">
-            <img src="{{asset('page/upload/news-posts/h1.jpg')}}" alt="">
-            <div class="hover-box">
-                <div class="inner-hover">
-                    <a class="category-post travel" href="travel.html">Travel</a>
-                    <h2><a href="single-post.html">Lorem ipsum dolor sit amet, consectetuer</a></h2>
-                    <ul class="post-tags">
-                        <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
-                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                    </ul>
-                    <p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
-                </div>
-            </div>
-        </div>
-
 
     </div>
 
@@ -142,25 +111,37 @@
                             </div>
                             <div class="owl-carousel" data-num="3">
                                 @if(isset($category->articles))
-                                    @foreach( $category->articles->sortbyDesc('id') as $article)
+                                    @if(count($category->articles)<=10)
+                                        @foreach($category->articles->sortbyDesc('id') as $article)
+                                            <div class="item news-post image-post3 nxp_is_category">
+                                                <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
+                                                <div class="hover-box">
+                                                    <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article->title}}</a></h2>
+                                                    <ul class="post-tags">
+                                                        <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @else
+                                    @foreach($category->articles->sortbyDesc('id')->take(10) as $article)
                                         <div class="item news-post image-post3 nxp_is_category">
-                                        <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
-                                        <div class="hover-box">
-                                            <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article->title}}</a></h2>
-                                            <ul class="post-tags">
-                                                <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
-                                            </ul>
+                                            <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
+                                            <div class="hover-box">
+                                                <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article->title}}</a></h2>
+                                                <ul class="post-tags">
+                                                    <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
                                     @endforeach
+                                    @endif
                                 @endif
                             </div>
                         </div>
                         @endforeach
                     @endif
                     <!-- End carousel box -->
-
-
 
                     <!-- google addsense -->
                     <div class="advertisement">
