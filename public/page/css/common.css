@@ -10,3 +10,7 @@
 .nxp_is_category img{
     height: 220px;
 }
+.all_article_nxp img{
+    max-height: 340px;
+    min-height: 300px;
+}

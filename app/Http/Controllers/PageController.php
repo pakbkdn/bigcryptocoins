@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
+use Illuminate\Support\Collection;
+use Illuminate\Pagination\Paginator;
 class PageController extends Controller
 {
     public function getIndex()
@@ -16,12 +18,9 @@ class PageController extends Controller
             $articles[] = $article;
         }
         $article_hot = Article::orderBy('id', 'desc')->limit(3)->get();
-        $article_top10 = Article::orderBy('id', 'desc')->limit(7)->get();
-        // foreach($categories as $category){
-        //     $articles1 = $category->articles->orderBy('id'.'desc')->limit(5);
-        //     dd($articles1);
-        // }
-        return view('page.index', compact(['categories', 'articles', 'article_hot', 'article_top10' ]));
+        $article_top10 = Article::orderBy('id', 'desc')->limit(10)->get();
+        $article_all = Article::orderBy('id','desc')->paginate(6);
+        return view('page.index', compact([ 'articles', 'article_hot', 'article_top10', 'article_all' ]));
     }
 
     public function getArticle()
