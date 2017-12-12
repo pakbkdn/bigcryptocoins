@@ -18,7 +18,7 @@
                                 <h1>{{$article->title}}</h1>
                                 <ul class="post-tags">
                                     <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y')}}</li>
-                                    <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
+                                    <li><i class="fa fa-user"></i>by <a href="#">{{$article->User->username}}</a></li>
                                     <li><a href="#"><i class="fa fa-comments-o"></i><span>0</span></a></li>
                                     <li><i class="fa fa-eye"></i>872</li>
                                 </ul>
@@ -27,8 +27,9 @@
                             <div class="share-post-box">
                                 <ul class="share-box">
                                     <li><i class="fa fa-share-alt"></i><span>Share Post</span></li>
-                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i><span>Share on Facebook</span></a></li>
-                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i><span>Share on Twitter</span></a></li>
+                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i><span></span></a></li>
+                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i><span></span></a></li>
+                                    <li><a class="google" href="#"><i class="fa fa-google-plus"></i><span></span></a></li>
                                 </ul>
                             </div>
 
@@ -51,8 +52,9 @@
                             <div class="share-post-box">
                                 <ul class="share-box">
                                     <li><i class="fa fa-share-alt"></i><span>Share Post</span></li>
-                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>Share on Facebook</a></li>
-                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i>Share on Twitter</a></li>
+                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
                                 </ul>
                             </div>
 

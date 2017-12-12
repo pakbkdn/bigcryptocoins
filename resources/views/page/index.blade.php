@@ -11,16 +11,15 @@
             <ul class="bxslider">
                 @if(isset($article_hot))
                     @foreach( $article_hot as $article_hot )
-                        <li>
                         <div class="news-post image-post nxpsl">
-                            <img src="page/images/thumbnail/{{ $article_hot->thumbnail }}" alt="">
+                            <img src="{{asset('page/images/thumbnail/'.$article_hot->thumbnail)}}" alt="">
                             <div class="hover-box">
                                 <div class="inner-hover">
-                                    <a class="category-post world" href="world.html">{{ $article_hot->category->name}}</a>
+                                    <a class="category-post world" href="{{ url('category/'.$article_hot->category->name) }}">{{ $article_hot->category->name}}</a>
                                     <h2><a href="{{url('news/'.$article_hot->alias)}}">{{ $article_hot->title}}</a></h2>
                                     <ul class="post-tags">
                                         <li><i class="fa fa-clock-o"></i>{{ $article_hot->created_at->format('d-M-Y') }}</li>
-                                        <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
+                                        <li><i class="fa fa-user"></i>by <a href="#">{{ $article_hot->User->username }}</a></li>
                                         <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
                                         <li><i class="fa fa-eye"></i>872</li>
                                     </ul>
@@ -34,10 +33,10 @@
         @if(isset($articles))
             @foreach($article_couser as $article)
                 <div class="news-post image-post default-size nxp">
-                <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
+                <img src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="">
                 <div class="hover-box">
                     <div class="inner-hover">
-                        <a class="category-post travel" href="travel.html">{{ $article->category->name}}</a>
+                        <a class="category-post travel" href="{{ url('category/'.$article->category->name) }}">{{ $article->category->name}}</a>
                         <h2><a href="{{ url('news/'.$article->alias) }}">{{$article->title}}</a></h2>
                         <ul class="post-tags">
                             <li><i class="fa fa-clock-o"></i><span>{{ $article->created_at->format('d-M-Y') }}</span></li>
@@ -54,43 +53,6 @@
 
 </section>
 <!-- End heading-news-section -->
-
-
-
-<!-- features-today-section
-    ================================================== -->
-<section class="features-today">
-    <div class="container">
-
-        <div class="title-section">
-            <h1><span>Today's Featured</span></h1>
-        </div>
-
-        <div class="features-today-box owl-wrapper nxp_top10">
-            <div class="owl-carousel" data-num="4">
-                @foreach( $article_top10 as $article_top10 )
-                    <div class="item news-post standard-post">
-                    <div class="post-gallery">
-                        <img src="page/images/thumbnail/{{ $article_top10->thumbnail }}" alt="">
-                        <a class="category-post world" href="#">{{$article_top10->category->name}}</a>
-                    </div>
-                    <div class="post-content">
-                        <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article_top10->title}}</a></h2>
-                        <ul class="post-tags">
-                            <li><i class="fa fa-clock-o"></i>{{$article_hot->created_at->format('d-M-Y')}}</li>
-                            <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
-                            <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                @endforeach
-
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- End features-today-section -->
 
 <!-- block-wrapper-section
     ================================================== -->
@@ -175,16 +137,16 @@
 
                         <div class="latest-articles iso-call">
                             @if( isset( $article_all ))
-                                @foreach( $article_all as $article_all )
+                                @foreach( $article_all as $all )
                                     <div class="news-post standard-post2 default-size all_article_nxp">
                                         <div class="post-gallery">
-                                            <img src="page/images/thumbnail/{{ $article_all->thumbnail }}" alt="">
+                                            <img src="{{asset('page/images/thumbnail/'.$all->thumbnail)}}" alt="">
                                         </div>
                                         <div class="post-title">
-                                            <h2><a href=" {{url('news/'.$article_all->alias)}} ">{{$article_all->title}}</a></h2>
+                                            <h2><a href=" {{url('news/'.$all->alias)}} ">{{$all->title}}</a></h2>
                                             <ul class="post-tags">
-                                                <li><i class="fa fa-clock-o"></i>{{$article_all->created_at->format('d-M-Y')}}</li>
-                                                <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
+                                                <li><i class="fa fa-clock-o"></i>{{$all->created_at->format('d-M-Y')}}</li>
+                                                <li><i class="fa fa-user"></i>by <a href="#">{{ $all->User->username }}</a></li>
                                                 <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
                                             </ul>
                                         </div>
@@ -192,6 +154,10 @@
                                 @endforeach
                             @endif
                         </div>
+                        <div class="pagination-box" style="text-align: center;">
+                            {{$article_all->links()}}
+                        </div>
+
                     </div>
                     <!-- End masonry box -->
                     <div class="">

@@ -94,7 +94,7 @@ class ArticleController extends Controller
         $editArticle = Article::find($id);
         $editArticle ->title = $rq->input('title');
         $editArticle ->alias = str_slug($rq->input('title'));
-        if($rq->input('category')!= 0)
+        if($rq->input('category')!= null)
         {
             $editArticle ->category_id = $rq->input('category');
         }
@@ -108,7 +108,7 @@ class ArticleController extends Controller
             $destinationPath = public_path('/page/images/thumbnail');
             $file->move($destinationPath, $images);
             $oldfile = $editArticle->thumbnail;
-            Storage::delete('/page/images/thumbnail/1512545922_anh phuong.jpg');
+            Storage::delete($oldfile);
             $editArticle['thumbnail'] = $images;
         }
         $editArticle ->hot = $rq->input('hot');
