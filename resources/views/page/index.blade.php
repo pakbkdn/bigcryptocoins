@@ -27,9 +27,7 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
-                    @endforeach
-                @endif
+             @endif
             </ul>
         </div>
         @if(isset($articles))
@@ -50,7 +48,7 @@
             </div>
             @endforeach
         @endif
-
+<!--
         <div class="news-post image-post default-size nxp">
             <img src="{{asset('page/upload/news-posts/h1.jpg')}}" alt="">
             <div class="hover-box">
@@ -79,7 +77,7 @@
                     <p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
     </div>
@@ -104,12 +102,12 @@
                     <div class="item news-post standard-post">
                     <div class="post-gallery">
                         <img src="page/images/thumbnail/{{ $article_top10->thumbnail }}" alt="">
-                        <a class="category-post world" href="world.html">{{$article_top10->category->name}}</a>
+                        <a class="category-post world" href="#">{{$article_top10->category->name}}</a>
                     </div>
                     <div class="post-content">
-                        <h2><a href="single-post.html">{{ $article_top10->title}}</a></h2>
+                        <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article_top10->title}}</a></h2>
                         <ul class="post-tags">
-                            <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                            <li><i class="fa fa-clock-o"></i>{{$article_hot->created_at->format('d-M-Y')}}</li>
                             <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
                             <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
                         </ul>
@@ -134,8 +132,6 @@
                 <!-- block content -->
                 <div class="block-content">
 
-
-
                     <!-- carousel box -->
                     @if(isset($categories))
                         @foreach($categories as $category)
@@ -157,7 +153,6 @@
                                     </div>
                                     @endforeach
                                 @endif
-
                             </div>
                         </div>
                         @endforeach

@@ -28,10 +28,10 @@ class PageController extends Controller
         return view('page.articles');
     }
 
-    public function getDetail($id, $category_id)
+    public function getDetail($title)
     {
-        $article = Article::Find($id);
-        $articles =  Article::where('category_id', $category_id)->get();
-        return view('page.detail', compact('article', 'articles' ));
+        $article = Article::where('alias', $title)->first();
+        $relatives =  Article::where('category_id', $article->Category->id)->get();
+        return view('page.detail', compact('article', 'relatives' ));
     }
 }
