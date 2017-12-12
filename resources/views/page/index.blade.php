@@ -27,11 +27,11 @@
                             </div>
                         </div>
                     @endforeach
-                @endif
+             @endif
             </ul>
         </div>
         @if(isset($articles))
-            @foreach($articles as $article)
+            @foreach($article_couser as $article)
                 <div class="news-post image-post default-size nxp">
                 <img src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="">
                 <div class="hover-box">
@@ -48,7 +48,6 @@
             </div>
             @endforeach
         @endif
-
 
     </div>
 
@@ -75,29 +74,29 @@
                             <div class="owl-carousel" data-num="3">
                                 @if(isset($category->articles))
                                     @if(count($category->articles)<=10)
-                                        @for($i=0 ; $i<(count($category->articles)) ; $i++)
+                                        @foreach($category->articles->sortbyDesc('id') as $article)
                                             <div class="item news-post image-post3 nxp_is_category">
-                                                <img src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="">
+                                                <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
                                                 <div class="hover-box">
-                                                    <h2><a href="{{ url('news/'.$article->alias) }}">{{ $category->articles[$i]->title}}</a></h2>
+                                                    <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article->title}}</a></h2>
                                                     <ul class="post-tags">
-                                                        <li><i class="fa fa-clock-o"></i>{{ $category->articles[$i]->created_at->format('d-M-Y') }}</li>
+                                                        <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                        @endfor
+                                        @endforeach
                                     @else
-                                        @for($i=1 ; $i<=10 ; $i++)
-                                            <div class="item news-post image-post3 nxp_is_category">
-                                                <img src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="">
-                                                <div class="hover-box">
-                                                    <h2><a href="{{ url('news/'.$article->alias) }}">{{ $category->articles[$i]->title}}</a></h2>
-                                                    <ul class="post-tags">
-                                                        <li><i class="fa fa-clock-o"></i>{{ $category->articles[$i]->created_at->format('d-M-Y') }}</li>
-                                                    </ul>
-                                                </div>
+                                    @foreach($category->articles->sortbyDesc('id')->take(10) as $article)
+                                        <div class="item news-post image-post3 nxp_is_category">
+                                            <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
+                                            <div class="hover-box">
+                                                <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article->title}}</a></h2>
+                                                <ul class="post-tags">
+                                                    <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
+                                                </ul>
                                             </div>
-                                        @endfor
+                                        </div>
+                                    @endforeach
                                     @endif
                                 @endif
                             </div>
@@ -105,8 +104,6 @@
                         @endforeach
                     @endif
                     <!-- End carousel box -->
-
-
 
                     <!-- google addsense -->
                     <div class="advertisement">

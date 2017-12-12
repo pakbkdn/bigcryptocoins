@@ -15,12 +15,15 @@ class PageController extends Controller
         $articles = array();
         foreach($categories as $category){
             $article = Article::where('category_id',$category->id)->orderBy('id', 'desc')->first();
-            $articles[] = $article;
+            if(count($article)>0){
+                $articles[] = $article;
+            }
         }
+        $article_couser = Article::orderBy('id','desc')->take(8)->get();
         $article_hot = Article::orderBy('id', 'desc')->limit(3)->get();
         $article_top10 = Article::orderBy('id', 'desc')->limit(10)->get();
         $article_all = Article::orderBy('id','desc')->paginate(6);
-        return view('page.index', compact([ 'articles', 'article_hot', 'article_top10', 'article_all' ]));
+        return view('page.index', compact([ 'articles', 'article_couser', 'article_hot', 'article_top10', 'article_all' ]));
     }
 
     public function getArticle($category)
