@@ -23,9 +23,11 @@ class PageController extends Controller
         return view('page.index', compact([ 'articles', 'article_hot', 'article_top10', 'article_all' ]));
     }
 
-    public function getArticle()
+    public function getArticle($category)
     {
-        return view('page.articles');
+        $category = Category::where('name', $category)->first();
+        $articles = Article::where('category_id', $category->id)->paginate(9);
+        return view('page.articles', compact('category', 'articles'));
     }
 
     public function getDetail($title)

@@ -86,7 +86,7 @@
                     <ul class="nav navbar-nav navbar-left">
                         <li ><a class="home" href="{{url('/')}}">Home</a></li>
                         @foreach($categories as $category)
-                            <li ><a class="home" href="#">{{$category->name}}</a></li>
+                            <li ><a class="home" href="{{url('category/'.$category->name)}}">{{$category->name}}</a></li>
                         @endforeach
                     </ul>
                     <form class="navbar-form navbar-right" role="search">

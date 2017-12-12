@@ -17,7 +17,7 @@
                                 <div class="col-lg-4">
                                     <div class="form-group">
                                         <label>Select category</label>
-                                        <select class="form-control">
+                                        <select class="form-control" name="category">
                                                 <option value="">select category</option>
                                             @foreach($categories as $category)
                                                 <option value="{{$category->id}}">{{$category->name}}</option>
@@ -60,12 +60,12 @@
                                         <label>Hot News</label>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="hot" id="hot" value="1">Yes
+                                                <input type="radio" name="hot" id="hot" value="1" @if($article->hot ==1) checked @endif >Yes
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="hot" id="hot" value="0" checked>No
+                                                <input type="radio" name="hot" id="hot" value="0" @if($article->hot ==0) checked @endif>No
                                             </label>
                                         </div>
                                     </div>

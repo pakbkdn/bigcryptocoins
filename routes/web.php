@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'PageController@getIndex')->name('home');
-Route::get('article', 'PageController@getArticle');
+Route::get('category/{category}', 'PageController@getArticle');
 Route::get('news/{title}', 'PageController@getDetail');
 
 
