@@ -32,6 +32,6 @@ class PageController extends Controller
     {
         $article = Article::where('alias', $title)->first();
         $relatives =  Article::where('category_id', $article->Category->id)->get();
-        return view('page.detail', compact('article', 'relatives' ));
+        return view('page.detail', compact('article', 'relatives'));
     }
 }
