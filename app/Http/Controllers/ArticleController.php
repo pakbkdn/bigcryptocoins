@@ -52,6 +52,7 @@ class ArticleController extends Controller
     );
         $addArticle = new Article;
         $addArticle ->title = $rq->input('title');
+        $addArticle ->alias = str_slug($rq->input('title'));
         $addArticle ->category_id = $rq->input('category');
         $addArticle ->description = $rq->input('description');
         $addArticle ->content = $rq->input('content');
@@ -92,6 +93,7 @@ class ArticleController extends Controller
     );
         $editArticle = Article::find($id);
         $editArticle ->title = $rq->input('title');
+        $editArticle ->alias = str_slug($rq->input('title'));
         if($rq->input('category')!= 0)
         {
             $editArticle ->category_id = $rq->input('category');
