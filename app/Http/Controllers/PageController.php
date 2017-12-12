@@ -15,7 +15,9 @@ class PageController extends Controller
         $articles = array();
         foreach($categories as $category){
             $article = Article::where('category_id',$category->id)->orderBy('id', 'desc')->first();
-            $articles[] = $article;
+            if(count($article)>0){
+                $articles[] = $article;
+            }
         }
         $article_hot = Article::orderBy('id', 'desc')->limit(3)->get();
         $article_top10 = Article::orderBy('id', 'desc')->limit(10)->get();

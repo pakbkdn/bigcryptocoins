@@ -27,6 +27,7 @@
                                 </div>
                             </div>
                         </div>
+                    @endforeach
              @endif
             </ul>
         </div>
@@ -48,7 +49,7 @@
             </div>
             @endforeach
         @endif
-<!--
+
         <div class="news-post image-post default-size nxp">
             <img src="{{asset('page/upload/news-posts/h1.jpg')}}" alt="">
             <div class="hover-box">
@@ -77,8 +78,7 @@
                     <p>Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.</p>
                 </div>
             </div>
-        </div> -->
-
+        </div>
 
     </div>
 
@@ -213,7 +213,7 @@
                     </div>
                     <!-- End masonry box -->
                     <div class="">
-                        
+
                     </div>
 
                 </div>
