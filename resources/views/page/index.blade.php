@@ -17,9 +17,9 @@
                             <div class="hover-box">
                                 <div class="inner-hover">
                                     <a class="category-post world" href="world.html">{{ $article_hot->category->name}}</a>
-                                    <h2><a href="single-post.html">{{ $article_hot->title}}</a></h2>
+                                    <h2><a href="{{url('news/'.$article_hot->alias)}}">{{ $article_hot->title}}</a></h2>
                                     <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                                        <li><i class="fa fa-clock-o"></i>{{ $article_hot->created_at->format('d-M-Y') }}</li>
                                         <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
                                         <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
                                         <li><i class="fa fa-eye"></i>872</li>
@@ -38,9 +38,9 @@
                 <div class="hover-box">
                     <div class="inner-hover">
                         <a class="category-post travel" href="travel.html">{{ $article->category->name}}</a>
-                        <h2><a href="single-post.html">{{$article->title}}</a></h2>
+                        <h2><a href="{{ url('news/'.$article->alias) }}">{{$article->title}}</a></h2>
                         <ul class="post-tags">
-                            <li><i class="fa fa-clock-o"></i><span>27 may 2013</span></li>
+                            <li><i class="fa fa-clock-o"></i><span>{{ $article->created_at->format('d-M-Y') }}</span></li>
                             <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
                         </ul>
                         <p>{{ $article-> description}}</p>
@@ -145,9 +145,9 @@
                                         <div class="item news-post image-post3 nxp_is_category">
                                         <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
                                         <div class="hover-box">
-                                            <h2><a href="single-post.html">{{ $article->title}}</a></h2>
+                                            <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article->title}}</a></h2>
                                             <ul class="post-tags">
-                                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                                                <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -199,9 +199,9 @@
                                             <img src="page/images/thumbnail/{{ $article_all->thumbnail }}" alt="">
                                         </div>
                                         <div class="post-title">
-                                            <h2><a href="single-post.html">{{$article_all->title}}</a></h2>
+                                            <h2><a href=" {{url('news/'.$article_all->alias)}} ">{{$article_all->title}}</a></h2>
                                             <ul class="post-tags">
-                                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                                                <li><i class="fa fa-clock-o"></i>{{$article_all->created_at->format('d-M-Y')}}</li>
                                                 <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
                                                 <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
                                             </ul>
