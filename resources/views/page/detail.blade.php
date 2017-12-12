@@ -17,7 +17,7 @@
                             <div class="title-post">
                                 <h1>{{$article->title}}</h1>
                                 <ul class="post-tags">
-                                    <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                                    <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y')}}</li>
                                     <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
                                     <li><a href="#"><i class="fa fa-comments-o"></i><span>0</span></a></li>
                                     <li><i class="fa fa-eye"></i>872</li>
@@ -70,7 +70,7 @@
                                       fjs.parentNode.insertBefore(js, fjs);
                                     }(document, 'script', 'facebook-jssdk'));
                                 </script>
-                                <div class="fb-comments" data-href="{{url('/detail')}}" data-width="100%" data-numposts="5"></div>
+                                <div class="fb-comments" data-href="{{url('news/'.$article->alias)}}" data-width="100%" data-numposts="5"></div>
                             </div>
                             <!-- End comment -->
 
@@ -166,14 +166,14 @@
                                 <div class="owl-carousel" data-num="3">
                                     @foreach($relatives as $re)
                                         <div class="item news-post image-post3">
-                                        <img src="page/images/thumbnail/{{$re->thumbnail}}" alt="">
-                                        <div class="hover-box">
-                                            <h2><a href="single-post.html">{{$re->title}}</a></h2>
-                                            <ul class="post-tags">
-                                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                            </ul>
+                                            <img src="{{asset('page/images/thumbnail/'.$re->thumbnail)}}" alt="">
+                                            <div class="hover-box">
+                                                <h2><a href="{{url('news/'.$re->alias)}}">{{$re->title}}</a></h2>
+                                                <ul class="post-tags">
+                                                    <li><i class="fa fa-clock-o"></i>{{$re->created_at->format('d-M-Y')}}</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
                                     @endforeach
                                 </div>
                             </div>

@@ -18,10 +18,6 @@ class PageController extends Controller
         $article_hot = Article::orderBy('id', 'desc')->limit(3)->get();
 
         $article_top10 = Article::orderBy('id', 'desc')->limit(7)->get();
-        // foreach($categories as $category){
-        //     $articles1 = $category->articles->orderBy('id'.'desc')->limit(5);
-        //     dd($articles1);
-        // }
         return view('page.index', compact(['categories', 'articles', 'article_hot', 'article_top10' ]));
     }
 
@@ -30,10 +26,10 @@ class PageController extends Controller
         return view('page.articles');
     }
 
-    public function getDetail($id)
+    public function getDetail($title)
     {
-        $article = Article::Find($id);
-        $relatives =  Article::where('category_id',$article->Category->id)->get();
+        $article = Article::where('alias', $title)->first();
+        $relatives =  Article::where('category_id', $article->Category->id)->get();
         return view('page.detail', compact('article', 'relatives' ));
     }
 }

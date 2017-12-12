@@ -13,7 +13,7 @@
 
 Route::get('/', 'PageController@getIndex')->name('home');
 Route::get('article', 'PageController@getArticle');
-Route::get('{id}', 'PageController@getDetail');
+Route::get('news/{title}', 'PageController@getDetail');
 
 
 Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){

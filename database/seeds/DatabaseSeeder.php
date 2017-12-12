@@ -30,7 +30,9 @@ class CategoriesTableSeeder extends Seeder
             ['name'=> 'Analysis'],
             ['name'=> 'Ico'],
             ['name'=> 'bitcoin'],
-            ['name'=> 'ethereum']
+            ['name'=> 'ethereum'],
+            ['name'=> 'altcoins'],
+            ['name'=> 'mining']
         ]);
     }
 }
@@ -45,7 +47,11 @@ class ArticlesTableSeeder extends Seeder
     {
         DB::table('articles')->insert([
             ['title'=> 'ICO Analysis: Experty', 'alias'=> 'ico-analysis-experty',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'1'],
-            ['title'=> 'ICO Analysis: Experty', 'alias'=> 'ico-analysis-experty',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'1']
+            ['title'=> 'ICO Analysis: Experty', 'alias'=> 'ico-analysis-experty',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'2'],
+            ['title'=> 'ICO Analysis: Experty', 'alias'=> 'ico-analysis-experty',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'3'],
+            ['title'=> 'ICO Analysis: Experty', 'alias'=> 'ico-analysis-experty',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'4'],
+            ['title'=> 'ICO Analysis: Experty', 'alias'=> 'ico-analysis-experty',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'5'],
+            ['title'=> 'ICO Analysis: Experty', 'alias'=> 'ico-analysis-experty',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'6']
         ]);
     }
 }
