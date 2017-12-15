@@ -1,7 +1,5 @@
 <!-- sidebar -->
 <div class="sidebar">
-
-
     <div class="widget features-slide-widget">
         <div class="">
             <script type="text/javascript">
@@ -117,13 +115,7 @@
 
         <ul class="nav nav-tabs" id="myTab">
             <li class="active">
-                <a href="#option1" data-toggle="tab">Popular</a>
-            </li>
-            <li>
-                <a href="#option2" data-toggle="tab">Recent</a>
-            </li>
-            <li>
-                <a href="#option3" data-toggle="tab">Top Reviews</a>
+                <a href="#option1">Most View</a>
             </li>
         </ul>
 
@@ -174,113 +166,6 @@
                         <img src="{{asset('page/upload/news-posts/listw5.jpg')}}" alt="">
                         <div class="post-content">
                             <h2><a href="single-post.html">Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi. </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="tab-pane" id="option2">
-                <ul class="list-posts">
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw3.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Phasellus ultrices nulla quis nibh. Quisque a lectus. </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw4.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Donec consectetuer ligula vulputate sem tristique cursus. </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw5.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw1.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw2.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Sed arcu. Cras consequat.</a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="tab-pane" id="option3">
-                <ul class="list-posts">
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw4.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Donec consectetuer ligula vulputate sem tristique cursus. </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw1.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw3.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Phasellus ultrices nulla quis nibh. Quisque a lectus.  </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw2.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Sed arcu. Cras consequat.</a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw5.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</a></h2>
                             <ul class="post-tags">
                                 <li><i class="fa fa-clock-o"></i>27 may 2013</li>
                             </ul>

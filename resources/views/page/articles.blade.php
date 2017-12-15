@@ -18,13 +18,12 @@
                         @foreach($articles as $article)
                             <div class="col-md-4">
                                 <div class="news-post standard-post2">
-                                    <div class="post-gallery">
-                                        <img style="min-height: 220px;" src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="">
-                                        <a class="category-post world" href="{{ url('category/'.$category->name) }}">{{$category->name}}</a>
+                                    <div style="height: 220px; width: 100%;" class="post-gallery">
+                                        <a href="{{ url('news/'.$article->alias) }}"><img style="height: 100%;" src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt=""></a>
                                     </div>
-                                    <div style="min-height: 160px;" class="post-title">
-                                        <h2 style="min-height: 40px;"><a href="{{ url('news/'.$article->alias) }}">{{ $article->title }}</a></h2>
-                                        <p style="min-height: 80px;">{{$article->description}}</p>
+                                    <div class="post-title">
+                                        <h2 style="height: 40px; width: 100%;"><a href="{{ url('news/'.$article->alias) }}">{{ $article->title }}</a></h2>
+                                        <p style="height: 60px;">{{$article->description}}</p>
                                         <ul class="post-tags">
                                             <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
                                             <li><i class="fa fa-user"></i>by <a href="#">{{ $article->User->username }}</a></li>

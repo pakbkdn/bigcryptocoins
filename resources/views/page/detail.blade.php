@@ -52,9 +52,9 @@
                             <div class="share-post-box">
                                 <ul class="share-box">
                                     <li><i class="fa fa-share-alt"></i><span>Share Post</span></li>
-                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i><span></span></a></li>
+                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i><span></span></a></li>
+                                    <li><a class="google" href="#"><i class="fa fa-google-plus"></i><span></span></a></li>
                                 </ul>
                             </div>
 
@@ -168,7 +168,7 @@
                                 <div class="owl-carousel" data-num="3">
                                     @foreach($relatives as $re)
                                         <div class="item news-post image-post3">
-                                            <img src="{{asset('page/images/thumbnail/'.$re->thumbnail)}}" alt="">
+                                            <img style="height: 170px;" src="{{asset('page/images/thumbnail/'.$re->thumbnail)}}" alt="">
                                             <div class="hover-box">
                                                 <h2><a href="{{url('news/'.$re->alias)}}">{{$re->title}}</a></h2>
                                                 <ul class="post-tags">
