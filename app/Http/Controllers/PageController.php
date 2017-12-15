@@ -36,7 +36,9 @@ class PageController extends Controller
     public function getDetail($title)
     {
         $article = Article::where('alias', $title)->first();
-        $relatives =  Article::where('category_id', $article->Category->id)->get();
+        $relatives =  Article::where('category_id', $article->Category->id)
+                            ->where('alias','<>', $title)
+                            ->get();
         return view('page.detail', compact('article', 'relatives'));
     }
 }

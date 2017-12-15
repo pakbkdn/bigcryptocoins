@@ -12,7 +12,7 @@
                 @if(isset($article_hot))
                     @foreach( $article_hot as $article_hot )
                         <div class="news-post image-post nxpsl">
-                            <img src="{{asset('page/images/thumbnail/'.$article_hot->thumbnail)}}" alt="">
+                            <img style="height: 100%;" src="{{asset('page/images/thumbnail/'.$article_hot->thumbnail)}}" alt="">
                             <div class="hover-box">
                                 <div class="inner-hover">
                                     <a class="category-post world" href="{{ url('category/'.$article_hot->category->name) }}">{{ $article_hot->category->name}}</a>
