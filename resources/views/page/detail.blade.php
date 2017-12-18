@@ -19,8 +19,7 @@
                                 <ul class="post-tags">
                                     <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y')}}</li>
                                     <li><i class="fa fa-user"></i>by <a href="#">{{$article->User->username}}</a></li>
-                                    <li><a href="#"><i class="fa fa-comments-o"></i><span>0</span></a></li>
-                                    <li><i class="fa fa-eye"></i>872</li>
+                                    <li><i class="fa fa-eye"></i>{{$article->view}}</li>
                                 </ul>
                             </div>
 

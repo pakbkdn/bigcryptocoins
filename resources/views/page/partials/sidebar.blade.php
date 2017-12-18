@@ -83,7 +83,7 @@
 
     <div class="fb-page" data-href="https://www.facebook.com/bigcryptocoins/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
         <blockquote cite="https://www.facebook.com/bigcryptocoins/" class="fb-xfbml-parse-ignore">
-            <a href="https://www.facebook.com/bigcryptocoins/">Bigcryptocpoins</a>
+            <a href="https://www.facebook.com/bigcryptocoins/">Bigcryptocoins</a>
         </blockquote>
     </div>
     <div id="fb-root"></div>
@@ -122,55 +122,18 @@
         <div class="tab-content">
             <div class="tab-pane active" id="option1">
                 <ul class="list-posts">
+                    @foreach($mostview as $most)
                     <li>
-                        <img src="{{asset('page/upload/news-posts/listw1.jpg')}}" alt="">
+                        <img src="{{asset('page/images/thumbnail/'.$most->thumbnail)}}" alt="">
                         <div class="post-content">
-                            <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
+                            <h2><a href="{{url('news/'.$most->alias)}}">{{$most->title}}</a></h2>
                             <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
+                                <li><i class="fa fa-clock-o"></i>{{$most->created_at->format('d-M-Y')}}</li>
+                                <li><i class="fa fa-eye"></i>{{$most->view}}</li>
                             </ul>
                         </div>
                     </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw2.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Sed arcu. Cras consequat. </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw3.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Phasellus ultrices nulla quis nibh. Quisque a lectus.  </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw4.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Donec consectetuer ligula vulputate sem tristique cursus. </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <img src="{{asset('page/upload/news-posts/listw5.jpg')}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="single-post.html">Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi. </a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                            </ul>
-                        </div>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
         </div>

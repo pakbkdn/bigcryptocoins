@@ -14,7 +14,8 @@
                         <h1><span class="world">{{$category->name}}</span></h1>
                     </div>
 
-                    <div class="row">
+                    <div class="row$articles">
+                        @if(isset($articles))
                         @foreach($articles as $article)
                             <div class="col-md-4">
                                 <div class="news-post standard-post2">
@@ -27,13 +28,13 @@
                                         <ul class="post-tags">
                                             <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
                                             <li><i class="fa fa-user"></i>by <a href="#">{{ $article->User->username }}</a></li>
-                                            <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                                            <li><i class="fa fa-eye"></i>872</li>
+                                            <li><i class="fa fa-eye"></i>{{$article->view}}</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
+                        @endif
                     </div>
 
                 </div>
