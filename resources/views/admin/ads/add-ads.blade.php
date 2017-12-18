@@ -34,7 +34,7 @@
                                           </span>
                                      @endif
                                      <div class="form-group">
-                                         <label>700 x 87</label>
+                                         <label>728 x 90</label>
                                          <input type="file" name="image1" id="files1" value="{{old('image1')}}"><br>
                                          <img alt=""  id="image1" style="width: 700px; height: 87px;">
 
@@ -45,7 +45,7 @@
                                            </span>
                                       @endif
                                      <div class="form-group">
-                                         <label>340 x 283</label>
+                                         <label>368 x 300</label>
                                          <input type="file" name="image2" id="files2" value="{{old('image2')}}"><br>
                                          <img alt="" id="image2" style="width: 340px; height: 283px;">
                                      </div>

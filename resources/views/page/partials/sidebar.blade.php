@@ -19,61 +19,16 @@
             </script>
         </div>
         <div class="title-section">
-            <h1><span>Featured Posts</span></h1>
+            <h1><span>Advertisement</span></h1>
         </div>
         <div class="image-post-slider">
             <ul class="bxslider">
                 <li>
                     <div class="news-post image-post2">
                         <div class="post-gallery">
-                            <img src="{{asset('page/upload/news-posts/im3.jpg')}}" alt="">
-                            <div class="hover-box">
-                                <div class="inner-hover">
-                                    <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                        <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
-                                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                                        <li><i class="fa fa-eye"></i>872</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="news-post image-post2">
-                        <div class="post-gallery">
-                            <img src="{{asset('page/upload/news-posts/im1.jpg')}}" alt="">
-                            <div class="hover-box">
-                                <div class="inner-hover">
-                                    <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                        <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
-                                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                                        <li><i class="fa fa-eye"></i>872</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="news-post image-post2">
-                        <div class="post-gallery">
-                            <img src="{{asset('page/upload/news-posts/im2.jpg')}}" alt="">
-                            <div class="hover-box">
-                                <div class="inner-hover">
-                                    <h2><a href="single-post.html">Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. </a></h2>
-                                    <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                        <li><i class="fa fa-user"></i>by <a href="#">John Doe</a></li>
-                                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                                        <li><i class="fa fa-eye"></i>872</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            @foreach($ads as $ad)
+                            <a href="{{$ad->link}}"  target="_blank"><img style="width: 368px; height: 300px" src="{{asset('page/images/image2/'.$ad->image2)}}" alt=""></a>
+                            @endforeach
                         </div>
                     </div>
                 </li>
@@ -95,21 +50,6 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-
-    <div class="advertisement">
-        <div class="desktop-advert">
-            <span>Advertisement</span>
-            <img src="{{asset('page/upload/addsense/300x250.jpg')}}" alt="">
-        </div>
-        <div class="tablet-advert">
-            <span>Advertisement</span>
-            <img src="{{asset('page/upload/addsense/200x200.jpg')}}" alt="">
-        </div>
-        <div class="mobile-advert">
-            <span>Advertisement</span>
-            <img src="{{asset('upload/addsense/300x250.jpg')}}" alt="">
-        </div>
-    </div>
 
     <div class="widget tab-posts-widget">
 
@@ -158,21 +98,6 @@
             <li><a href="#">Music</a></li>
         </ul>
 
-    </div>
-
-    <div class="advertisement">
-        <div class="desktop-advert">
-            <span>Advertisement</span>
-            <img src="{{asset('page/upload/addsense/300x250.jpg')}}" alt="">
-        </div>
-        <div class="tablet-advert">
-            <span>Advertisement</span>
-            <img src="{{asset('page/upload/addsense/200x200.jpg')}}" alt="">
-        </div>
-        <div class="mobile-advert">
-            <span>Advertisement</span>
-            <img src="{{asset('page/upload/addsense/300x250.jpg')}}" alt="">
-        </div>
     </div>
 
 </div>

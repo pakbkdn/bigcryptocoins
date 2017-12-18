@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Category;
 use App\Article;
+use App\Adv;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -25,6 +26,11 @@ class AppServiceProvider extends ServiceProvider
        {
            $mostview = Article::orderBy('view', 'desc')->limit(5)->get();
            View::share('mostview', $mostview);
+       }
+       if (\Schema::hasTable('ads'))
+       {
+           $ads = Adv::orderBy('id', 'desc')->limit(5)->get();
+           View::share('ads', $ads);
        }
 
     }

@@ -109,15 +109,21 @@
                     <div class="advertisement">
                         <div class="desktop-advert">
                             <span>Advertisement</span>
-                            <img src="{{asset('page/upload/addsense/728x90-white.jpg')}}" alt="">
+                            @foreach($ads as $ad)
+                            <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="" ></a>
+                            @endforeach
                         </div>
                         <div class="tablet-advert">
                             <span>Advertisement</span>
-                            <img src="{{asset('page/upload/addsense/468x60-white.jpg')}}" alt="">
+                            @foreach($ads as $ad)
+                            <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="" ></a>
+                            @endforeach
                         </div>
                         <div class="mobile-advert">
                             <span>Advertisement</span>
-                            <img src="{{asset('page/upload/addsense/300x250.jpg')}}" alt="">
+                            @foreach($ads as $ad)
+                            <a href="{{$ad->link}}" target="_blank"><img style="width: 368px; height: 300px" src="{{asset('page/images/image2/'.$ad->image2)}}" alt="" ></a> 
+                            @endforeach
                         </div>
                     </div>
                     <!-- End google addsense -->
