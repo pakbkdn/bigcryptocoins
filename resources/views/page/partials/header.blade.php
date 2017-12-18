@@ -76,14 +76,20 @@
                                 </div>
                                 @endforeach
                             </div>
-
                         </div>
                     </div>
                     <div class="tablet-advert">
                         <span>Advertisement</span>
-                        @foreach($ads as $ad)
-                        <a href="{{$ad->link}}" target="_blank"><img style="width: 368px; height: 300px" src="{{asset('page/images/image2/'.$ad->image2)}}" alt="368 x 300"></a>
-                        @endforeach
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                @foreach($ads as $ad)
+                                <div class="item active">
+                                    <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

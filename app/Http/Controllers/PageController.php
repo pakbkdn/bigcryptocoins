@@ -30,20 +30,33 @@ class PageController extends Controller
 
     public function getArticle($category)
     {
-        $category = Category::where('alias', $category)->first();
-        $articles = Article::where('category_id', $category->id)->paginate(9);
-        return view('page.articles', compact('category', 'articles'));
+        if ($category = Category::where('alias', $category)->first()) {
+            $articles = Article::where('category_id', $category->id)->paginate(9);
+            return view('page.articles', compact('category', 'articles'));
+        }
+        elseif ($category = Category::where('alias','<>', $category)->first()) {
+            return view('errors.404');
+        }
+
+
     }
 
     public function getDetail($title)
     {
-        $article = Article::where('alias', $title)->first();
-        $article->view = $article->view + 1;
-        $article->save();
-        $relatives =  Article::where('category_id', $article->Category->id)
-                            ->where('alias','<>', $title)
-                            ->get();
-        return view('page.detail', compact('article', 'relatives'));
+            if($article = Article::where('alias', $title)->first())
+            {
+                $article->view = $article->view + 1;
+                $article->save();
+                $relatives =  Article::where('category_id', $article->Category->id)
+                                    ->where('alias','<>', $title)
+                                    ->get();
+                return view('page.detail', compact('article', 'relatives'));
+            }
+            elseif($article = Article::where('alias','<>', $title)->first())
+                {
+                    return view('errors.404');
+                }
+
     }
 
     public function search(Request $req)

@@ -26,9 +26,32 @@
                             <div class="share-post-box">
                                 <ul class="share-box">
                                     <li><i class="fa fa-share-alt"></i><span>Share Post</span></li>
-                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i><span></span></a></li>
-                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i><span></span></a></li>
-                                    <li><a class="google" href="#"><i class="fa fa-google-plus"></i><span></span></a></li>
+                                    <li>
+                                        <div id="fb-root"></div>
+                                        <script>(function(d, s, id) {
+                                          var js, fjs = d.getElementsByTagName(s)[0];
+                                          if (d.getElementById(id)) return;
+                                          js = d.createElement(s); js.id = id;
+                                          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=1987044968242631';
+                                          fjs.parentNode.insertBefore(js, fjs);
+                                        }(document, 'script', 'facebook-jssdk'));</script>
+                                        <div class="fb-share-button" data-href="{{url('news/'.$article->alias)}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Chia sẻ</a></div>
+                                    </li>
+                                    <li>
+
+                                    </li>
+                                    <li style="vertical-align:middle;">
+                                        <div class="g-plus" data-action="share" data-height="24" data-href="{{url('news/'.$article->alias)}}"></div>
+                                        <script type="text/javascript">
+                                          window.___gcfg = {lang: 'en-GB'};
+
+                                          (function() {
+                                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                            po.src = 'https://apis.google.com/js/platform.js';
+                                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                          })();
+                                          </script>
+                                    </li>
                                 </ul>
                             </div>
 
@@ -37,23 +60,35 @@
                                 {!! $article->content !!}
 
                             </div>
-
-                            <div class="post-tags-box">
-                                <ul class="tags-box">
-                                    <li><i class="fa fa-tags"></i><span>Tags:</span></li>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Fashion</a></li>
-                                    <li><a href="#">Politics</a></li>
-                                    <li><a href="#">Sport</a></li>
-                                </ul>
-                            </div>
-
                             <div class="share-post-box">
                                 <ul class="share-box">
                                     <li><i class="fa fa-share-alt"></i><span>Share Post</span></li>
-                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i><span></span></a></li>
-                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i><span></span></a></li>
-                                    <li><a class="google" href="#"><i class="fa fa-google-plus"></i><span></span></a></li>
+                                    <li>
+                                        <div id="fb-root"></div>
+                                        <script>(function(d, s, id) {
+                                          var js, fjs = d.getElementsByTagName(s)[0];
+                                          if (d.getElementById(id)) return;
+                                          js = d.createElement(s); js.id = id;
+                                          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=1987044968242631';
+                                          fjs.parentNode.insertBefore(js, fjs);
+                                        }(document, 'script', 'facebook-jssdk'));</script>
+                                        <div class="fb-share-button" data-href="{{url('news/'.$article->alias)}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Chia sẻ</a></div>
+                                    </li>
+                                    <li>
+
+                                    </li>
+                                    <li style="vertical-align:middle;">
+                                        <div class="g-plus" data-action="share" data-height="24" data-href="{{url('news/'.$article->alias)}}"></div>
+                                        <script type="text/javascript">
+                                          window.___gcfg = {lang: 'en-GB'};
+
+                                          (function() {
+                                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                            po.src = 'https://apis.google.com/js/platform.js';
+                                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                          })();
+                                          </script>
+                                    </li>
                                 </ul>
                             </div>
 
