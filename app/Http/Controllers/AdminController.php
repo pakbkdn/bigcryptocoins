@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Category;
+use App\Article;
+use App\Adv;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -9,7 +12,11 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $categories = Category::all();
+        $articles = Article:: all();
+        $advertisement = Adv::all();
+        $users = User::all();
+        return view('admin.dashboard', compact('categories', 'articles', 'advertisement', 'users'));
     }
     public function delete()
     {
