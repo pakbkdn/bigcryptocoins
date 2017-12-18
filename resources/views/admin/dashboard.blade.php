@@ -16,7 +16,7 @@
                             <i class="fa fa-tasks fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">26</div>
+                            <div class="huge">{{count($categories)}}</div>
                             <div>Total Categories</div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                             <i class="fa fa-deaf fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">12</div>
+                            <div class="huge">{{count($articles)}}</div>
                             <div>Total Article</div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                             <i class="fa fa-empire  fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">124</div>
+                            <div class="huge">{{count($advertisement)}}</div>
                             <div> Advertisement</div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                             <i class="fa fa-users fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">13</div>
+                            <div class="huge">{{count($users)}}</div>
                             <div>Total Users</div>
                         </div>
                     </div>

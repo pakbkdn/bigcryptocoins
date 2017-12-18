@@ -105,8 +105,8 @@
                             <li ><a class="home" href="{{url('category/'.$category->alias)}}">{{$category->name}}</a></li>
                         @endforeach
                     </ul>
-                    <form class="navbar-form navbar-right" role="search">
-                        <input type="text" id="search" name="search" placeholder="Search here">
+                    <form class="navbar-form navbar-right" role="search" action="{{url('search')}}" method="get">
+                        <input type="text" id="search" name="search" value="{{ isset($_GET['search']) ? $_GET['search'] : ''}}" placeholder="Search...">
                         <button type="submit" id="search-submit"><i class="fa fa-search"></i></button>
                     </form>
                 </div>

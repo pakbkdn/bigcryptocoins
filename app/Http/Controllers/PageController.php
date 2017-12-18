@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
 class PageController extends Controller
 {
@@ -44,4 +46,37 @@ class PageController extends Controller
         return view('page.detail', compact('article', 'relatives'));
     }
 
+    public function search(Request $req)
+    {
+        $key = $req->search;
+        $articles = array();
+        $articles_is_titles = Article::where('title','like','%'.$req->search.'%')->get();
+        foreach ($articles_is_titles as $article_is_title ) {
+            $articles[] = $article_is_title;
+        }
+
+        $articles_is_description = Article::where('description','like','%'.$req->search.'%')->get();
+        foreach ($articles_is_titles as $article_is_title ) {
+            $articles[] = $article_is_title;
+        }
+
+        $categories = Category::where('name','like','%'.$req->search.'%')->get();
+        foreach ($categories as $category ) {
+            $category_id = $category->id;
+            $articles_is_category = Article::where('category_id',$category_id)->get();
+            foreach ($articles_is_category as $article_is_category) {
+                $articles[] = $article_is_category;
+            }
+        }
+
+        $articles = array_unique($articles);
+        $articles_sort = collect($articles)->sortbyDesc('id');
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $col = new Collection($articles_sort);
+        $perPage = 9;
+        $currentPageSearchResults = $col->slice(($currentPage - 1) * $perPage, $perPage)->all();
+        $result_search = new LengthAwarePaginator($currentPageSearchResults, count($col), $perPage, $currentPage,['path' => LengthAwarePaginator::resolveCurrentPath()] );
+        return view('page.search')->with(['result_search'=>$result_search->appends(Input::except('page')),'articles_sort'=>$articles_sort,'key'=>$key]);
+        // return view('page.articles', compact('article_view'));
+    }
 }
