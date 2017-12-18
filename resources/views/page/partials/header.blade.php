@@ -83,15 +83,6 @@
                                 </div>
                             </div>
 
-                            <!-- Left and right controls -->
-                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
                         </div>
                     </div>
                     <div class="tablet-advert">
@@ -111,7 +102,7 @@
                     <ul class="nav navbar-nav navbar-left">
                         <li ><a class="home" href="{{url('/')}}">Home</a></li>
                         @foreach($categories as $category)
-                            <li ><a class="home" href="{{url('category/'.$category->name)}}">{{$category->name}}</a></li>
+                            <li ><a class="home" href="{{url('category/'.$category->alias)}}">{{$category->name}}</a></li>
                         @endforeach
                     </ul>
                     <form class="navbar-form navbar-right" role="search">

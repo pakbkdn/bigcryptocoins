@@ -23,12 +23,12 @@ class PageController extends Controller
         $article_hot = Article::orderBy('id', 'desc')->limit(3)->get();
         $article_top10 = Article::orderBy('id', 'desc')->limit(10)->get();
         $article_all = Article::orderBy('id','desc')->paginate(6);
-        return view('page.index', compact([ 'articles', 'article_couser', 'article_hot', 'article_top10', 'article_all' ]));
+        return view('page.index', compact([ 'articles', 'article_couser', 'article_hot', 'article_top10', 'article_all','mostview' ]));
     }
 
     public function getArticle($category)
     {
-        $category = Category::where('name', $category)->first();
+        $category = Category::where('alias', $category)->first();
         $articles = Article::where('category_id', $category->id)->paginate(9);
         return view('page.articles', compact('category', 'articles'));
     }
@@ -36,9 +36,12 @@ class PageController extends Controller
     public function getDetail($title)
     {
         $article = Article::where('alias', $title)->first();
+        $article->view = $article->view + 1;
+        $article->save();
         $relatives =  Article::where('category_id', $article->Category->id)
                             ->where('alias','<>', $title)
                             ->get();
         return view('page.detail', compact('article', 'relatives'));
     }
+
 }

@@ -10,18 +10,17 @@
             <span class="top-stories">HOT ARTICLES</span>
             <ul class="bxslider">
                 @if(isset($article_hot))
-                    @foreach( $article_hot as $article_hot )
+                    @foreach( $article_hot as $hot )
                         <div class="news-post image-post nxpsl">
-                            <img style="height: 100%;" src="{{asset('page/images/thumbnail/'.$article_hot->thumbnail)}}" alt="">
+                            <img style="height: 100%;" src="{{asset('page/images/thumbnail/'.$hot->thumbnail)}}" alt="">
                             <div class="hover-box">
                                 <div class="inner-hover">
-                                    <a class="category-post world" href="{{ url('category/'.$article_hot->category->name) }}">{{ $article_hot->category->name}}</a>
-                                    <h2><a href="{{url('news/'.$article_hot->alias)}}">{{ $article_hot->title}}</a></h2>
+                                    <a class="category-post world" href="{{ url('category/'.$hot->category->alias) }}">{{ $hot->category->name}}</a>
+                                    <h2><a href="{{url('news/'.$hot->alias)}}">{{ $hot->title}}</a></h2>
                                     <ul class="post-tags">
-                                        <li><i class="fa fa-clock-o"></i>{{ $article_hot->created_at->format('d-M-Y') }}</li>
-                                        <li><i class="fa fa-user"></i>by <a href="#">{{ $article_hot->User->username }}</a></li>
-                                        <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
-                                        <li><i class="fa fa-eye"></i>872</li>
+                                        <li><i class="fa fa-clock-o"></i>{{ $hot->created_at->format('d-M-Y') }}</li>
+                                        <li><i class="fa fa-user"></i>by <a href="#">{{ $hot->User->username }}</a></li>
+                                        <li><i class="fa fa-eye"></i>{{$hot->view}}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -36,11 +35,11 @@
                 <img src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="">
                 <div class="hover-box">
                     <div class="inner-hover">
-                        <a class="category-post travel" href="{{ url('category/'.$article->category->name) }}">{{ $article->category->name}}</a>
+                        <a class="category-post travel" href="{{ url('category/'.$article->category->alias) }}">{{ $article->category->name}}</a>
                         <h2><a href="{{ url('news/'.$article->alias) }}">{{$article->title}}</a></h2>
                         <ul class="post-tags">
                             <li><i class="fa fa-clock-o"></i><span>{{ $article->created_at->format('d-M-Y') }}</span></li>
-                            <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+                            <li><i class="fa fa-eye"></i>{{$article->view}}</li>
                         </ul>
                         <p>{{ $article-> description}}</p>
                     </div>
@@ -81,6 +80,7 @@
                                                     <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article->title}}</a></h2>
                                                     <ul class="post-tags">
                                                         <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
+                                                        <li><i class="fa fa-eye"></i>{{$article->view}}</li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -147,7 +147,7 @@
                                             <ul class="post-tags">
                                                 <li><i class="fa fa-clock-o"></i>{{$all->created_at->format('d-M-Y')}}</li>
                                                 <li><i class="fa fa-user"></i>by <a href="#">{{ $all->User->username }}</a></li>
-                                                <li><a href="#"><i class="fa fa-comments-o"></i><span>23</span></a></li>
+                                                <li><i class="fa fa-eye"></i>{{$all->view}}</li>
                                             </ul>
                                         </div>
                                     </div>

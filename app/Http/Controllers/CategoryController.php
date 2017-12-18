@@ -23,6 +23,7 @@ class CategoryController extends Controller
     public function saveCategory(categoryRequest $request)
     {
     	$data=Input::all();
+        $data['alias'] = str_slug($data['name']);
     	$category = Category::create($data);
         Toastr::success('Add successful Category', $title = null, $options = []);
     	return redirect('administrator/category');
@@ -34,6 +35,7 @@ class CategoryController extends Controller
     public function updateCategory(Category $category,categoryRequest $request)
     {
         $data=Input::all();
+        $data['alias'] = str_slug($data['name']);
         $category->update($data);
         Toastr::success('Edit successful Category', $title = null, $options = []);
         return redirect('administrator/category');
