@@ -65,7 +65,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Administrator Bigcryptocoins</a>
+                <a class="navbar-brand" href="{{url('administrator')}}">Administrator Bigcryptocoins</a>
             </div>
             <!-- /.navbar-header -->
 
