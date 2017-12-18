@@ -36,7 +36,7 @@ class ArticleController extends Controller
     {
         $this->validate($rq,
         [
-            'title' => 'required',
+            'title' => 'required|unique:articles',
             'category' => 'required',
             'description' => 'required',
             'content' => 'required',
@@ -44,6 +44,7 @@ class ArticleController extends Controller
         ],
         [
             'title.required' => 'Title is required',
+            'title.unique' => 'The title has already been taken',
             'category.required' => 'Category is required',
             'description.required' => 'Description is required',
             'content.required' => 'Content is required',

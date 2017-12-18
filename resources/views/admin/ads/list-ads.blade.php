@@ -21,8 +21,8 @@
                                 <th>Ads ID</th>
                                 <th>Name</th>
                                 <th>Link</th>
-                                <th>700 x 87</th>
-                                <th>340 x 283</th>
+                                <th>728 x 90</th>
+                                <th>368 x 300</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>

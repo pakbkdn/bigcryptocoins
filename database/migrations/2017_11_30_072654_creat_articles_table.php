@@ -15,13 +15,13 @@ class CreatArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->unique();
-            $table->string('alias')->unique();
+            $table->string('title');
+            $table->string('alias');
             $table->longText('description');
             $table->longText('content');
             $table->string('thumbnail');
             $table->enum('hot',['1','0']);
-            $table->integer('view');
+            $table->integer('view')->default('0');
             $table->timestamps();
             $table->integer('category_id')->unsigned()->nullable(); //unsigned:Không âm; nullable:ko rỗng;
             $table->foreign('category_id')->references('id')->on('categories');
