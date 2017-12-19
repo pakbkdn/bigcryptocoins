@@ -21,7 +21,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="{{url('administrator/category')}}">
                     <div class="panel-footer">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="{{url('administrator/article/list-articles')}}">
                     <div class="panel-footer">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="{{url('administrator/ads')}}">
                     <div class="panel-footer">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="{{url('administrator/manage_user/list_user')}}">
                     <div class="panel-footer">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

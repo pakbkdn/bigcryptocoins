@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>Administrator - Bigcryptocoins</title>
+    <link rel="icon" href="{{asset('page/images/logo.ico')}}" type="image/x-icon">
 
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('admin/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
