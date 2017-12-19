@@ -6606,3 +6606,6 @@ ul.demo-list li a i {
   top: 4px;
   right: -30px;
 }
+.post-content p img{
+    max-width: 100%;
+}

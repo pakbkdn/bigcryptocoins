@@ -37,8 +37,8 @@
                                         }(document, 'script', 'facebook-jssdk'));</script>
                                         <div class="fb-share-button" data-href="{{url('news/'.$article->alias)}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Chia sẻ</a></div>
                                     </li>
-                                    <li>
-
+                                    <li style="vertical-align:middle;">
+                                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                                     </li>
                                     <li style="vertical-align:middle;">
                                         <div class="g-plus" data-action="share" data-height="24" data-href="{{url('news/'.$article->alias)}}"></div>
@@ -74,8 +74,8 @@
                                         }(document, 'script', 'facebook-jssdk'));</script>
                                         <div class="fb-share-button" data-href="{{url('news/'.$article->alias)}}" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Chia sẻ</a></div>
                                     </li>
-                                    <li>
-
+                                    <li style="vertical-align:middle;">
+                                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                                     </li>
                                     <li style="vertical-align:middle;">
                                         <div class="g-plus" data-action="share" data-height="24" data-href="{{url('news/'.$article->alias)}}"></div>
@@ -113,10 +113,10 @@
                             <div class="about-more-autor">
                                 <ul class="nav nav-tabs">
                                     <li class="active">
-                                        <a href="#about-autor" data-toggle="tab">About The Autor</a>
+                                        <a href="#about-autor" data-toggle="tab">About The Author</a>
                                     </li>
                                     <li>
-                                        <a href="#more-autor" data-toggle="tab">More From Autor</a>
+                                        <a href="#more-autor" data-toggle="tab">More From Author</a>
                                     </li>
                                 </ul>
 
@@ -124,70 +124,29 @@
 
                                     <div class="tab-pane active" id="about-autor">
                                         <div class="autor-box">
-                                            <img src="{{asset('page/upload/users/avatar1.jpg')}}" alt="">
                                             <div class="autor-content">
                                                 <div class="autor-title">
-                                                    <h1><span>Jane Smith</span><a href="autor-details.html">18 Posts</a></h1>
-                                                    <ul class="autor-social">
-                                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
-                                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
-                                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-                                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                                        <li><a href="#" class="dribble"><i class="fa fa-dribbble"></i></a></li>
-                                                    </ul>
+                                                    <h1><span>{{$article->User->username}}</span><a href="autor-details.html">{{$article->User->articles->count()}} Posts</a></h1>
                                                 </div>
-                                                <p>
-                                                    Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada.
-                                                </p>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="tab-pane" id="more-autor">
-                                        <div class="more-autor-posts">
-
-                                            <div class="news-post image-post3">
-                                                <img src="{{asset('page/upload/news-posts/gal1.jpg')}}" alt="">
-                                                <div class="hover-box">
-                                                    <h2><a href="single-post.html">Donec odio. Quisque volutpat mattis eros.</a></h2>
-                                                    <ul class="post-tags">
-                                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                                    </ul>
+                                        <div class="carousel-box owl-wrapper">
+                                            <div class="owl-carousel" data-num="3">
+                                                @foreach($article->User->articles as $news)
+                                                <div style="height: 165px;" class="news-post image-post3">
+                                                    <a href="{{url('news/'.$news->alias)}}"><img style="max-height: 100%;" src="{{asset('page/images/thumbnail/'.$news->thumbnail)}}" alt=""></a>
+                                                    <div class="hover-box">
+                                                        <h2><a href="{{url('news/'.$news->alias)}}">{{$news->title}}</a></h2>
+                                                        <ul class="post-tags">
+                                                            <li><i class="fa fa-clock-o"></i>{{$news->created_at->format('d-M-Y')}}</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
+                                                @endforeach
                                             </div>
-
-                                            <div class="news-post image-post3">
-                                                <img src="{{asset('page/upload/news-posts/gal2.jpg')}}" alt="">
-                                                <div class="hover-box">
-                                                    <h2><a href="single-post.html">Nullam malesuada erat ut turpis. </a></h2>
-                                                    <ul class="post-tags">
-                                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <div class="news-post image-post3">
-                                                <img src="{{asset('page/upload/news-posts/gal3.jpg')}}" alt="">
-                                                <div class="hover-box">
-                                                    <h2><a href="single-post.html">Suspendisse urna nibh.</a></h2>
-                                                    <ul class="post-tags">
-                                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <div class="news-post image-post3">
-                                                <img src="{{asset('page/upload/news-posts/gal4.jpg')}}" alt="">
-                                                <div class="hover-box">
-                                                    <h2><a href="single-post.html">Donec nec justo eget felis facilisis fermentum. Aliquam </a></h2>
-                                                    <ul class="post-tags">
-                                                        <li><i class="fa fa-clock-o"></i>27 may 2013</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
                                         </div>
                                     </div>
 
