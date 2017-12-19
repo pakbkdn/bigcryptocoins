@@ -94,26 +94,5 @@
         </div>
     </div>
 
-    <div class="widget tags-widget">
-
-        <div class="title-section">
-            <h1><span>Popular Tags</span></h1>
-        </div>
-
-        <ul class="tag-list">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Fashion</a></li>
-            <li><a href="#">Politics</a></li>
-            <li><a href="#">Sport</a></li>
-            <li><a href="#">Food</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">Travel</a></li>
-            <li><a href="#">World</a></li>
-            <li><a href="#">Music</a></li>
-        </ul>
-
-    </div>
-
 </div>
 <!-- End sidebar -->

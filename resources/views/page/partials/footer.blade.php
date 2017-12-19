@@ -14,7 +14,7 @@
                         <ul class="social-icons">
                             <li><a href="https://www.facebook.com/bigcryptocoins/" class="facebook"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="https://twitter.com/bigcryptocoins" class="twitter"><i class="fa fa-twitter"></i></a></li>                            
+                            <li><a href="https://twitter.com/bigcryptocoins" class="twitter"><i class="fa fa-twitter"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -23,8 +23,8 @@
                         <h1>Random Post</h1>
                         <ul class="list-posts">
                             @foreach($article_random as $random)
-                            <li>                                
-                                <img src="{{asset('page/images/thumbnail/'.$random->thumbnail)}}" alt="">
+                            <li>
+                                <a href="url('news/'.$random->alias)"><img src="{{asset('page/images/thumbnail/'.$random->thumbnail)}}" alt=""></a>
                                 <div class="post-content">
                                     <a href="{{ url('category/'.$random->category->alias) }}">{{$random->category->name}}</a>
                                     <h2><a href="{{url('news/'.$random->alias)}}">{{$random->name}}</a></h2>
@@ -43,12 +43,12 @@
                         <ul class="category-list">
                             @foreach($categories as $category)
                             <li>
-                                <a href="{{url('category/'.$category->alias) }}}}s">{{$category->name}} <span>{{$category->articles->count()}}</span></a>
+                                <a href="{{url('category/'.$category->alias) }}">{{$category->name}} <span>{{$category->articles->count()}}</span></a>
                             </li>
-                            @endforeach                            
+                            @endforeach
                         </ul>
                     </div>
-                </div>                
+                </div>
                 </div>
             </div>
         </div>
