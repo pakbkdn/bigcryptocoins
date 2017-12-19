@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
+use Artisan;
+use Storage;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -57,6 +59,10 @@ class PageController extends Controller
                     return view('errors.404');
                 }
 
+    }
+
+    public function updateArtisan(){
+        return Artisan::call('down');
     }
 
     public function search(Request $req)
