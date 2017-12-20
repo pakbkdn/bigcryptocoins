@@ -24,14 +24,14 @@ class AdsController extends Controller
         [
             'name' => 'required',
             'link' => 'required',
-            'image1' => 'required',
+            'image1' => 'required|file:1,10000',
             'image2' => 'required',
         ],
         [
             'name.required' => 'Name is required',
             'link.required' => 'Link is required',
-            'image1.required' => 'Image 700 x 87 is required',
-            'image2.required' => 'Image 340 x 283 is required',
+            'image1.required' => 'Image 728 x 90 is required',
+            'image2.required' => 'Image 368 x 300 is required',
         ]
     );
         $ads = new Adv;

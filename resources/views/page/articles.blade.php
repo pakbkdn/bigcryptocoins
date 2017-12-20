@@ -16,19 +16,19 @@
 
                     <div class="row$articles">
                         @if(isset($articles))
-                        @foreach($articles as $article)
+                        @foreach($articles as $art)
                             <div class="col-md-4">
                                 <div class="news-post standard-post2">
                                     <div style="height: 220px; width: 100%;" class="post-gallery">
-                                        <a href="{{ url('news/'.$article->alias) }}"><img style="height: 100%;" src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt=""></a>
+                                        <a href="{{ url('news/'.$art->alias) }}"><img style="height: 100%;" src="{{asset('page/images/thumbnail/'.$art->thumbnail)}}" alt=""></a>
                                     </div>
                                     <div class="post-title">
-                                        <h2 style="height: 40px; width: 100%;"><a href="{{ url('news/'.$article->alias) }}">{{ $article->title }}</a></h2>
-                                        <p style="height: 60px;">{{$article->description}}</p>
+                                        <h2 style="height: 40px; width: 100%;"><a href="{{ url('news/'.$art->alias) }}">{{ $art->title }}</a></h2>
+                                        <p style="height: 60px;">{{$art->description}}</p>
                                         <ul class="post-tags">
-                                            <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
-                                            <li><i class="fa fa-user"></i>by <a href="#">{{ $article->User->username }}</a></li>
-                                            <li><i class="fa fa-eye"></i>{{$article->view}}</li>
+                                            <li><i class="fa fa-clock-o"></i>{{ $art->created_at->format('d-M-Y') }}</li>
+                                            <li><i class="fa fa-user"></i>by <a href="#">{{ $art->User->username }}</a></li>
+                                            <li><i class="fa fa-eye"></i>{{$art->view}}</li>
                                         </ul>
                                     </div>
                                 </div>

@@ -24,10 +24,10 @@ class AppServiceProvider extends ServiceProvider
        }
        if (\Schema::hasTable('Articles'))
        {
-           $mostview = Article::orderBy('view', 'desc')->limit(5)->get();
+           $mostview = Article::orderBy('view', 'desc')->limit(7)->get();
            $article_random = Article::all()->random(3);
-           View::share('mostview',$mostview);          
-           View::share('article_random',$article_random);          
+           View::share('mostview',$mostview);
+           View::share('article_random',$article_random);
        }
        if (\Schema::hasTable('ads'))
        {

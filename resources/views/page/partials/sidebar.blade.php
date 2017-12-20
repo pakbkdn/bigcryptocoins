@@ -23,15 +23,15 @@
         </div>
         <div class="image-post-slider">
             <ul class="bxslider">
+                @foreach($ads as $ad)
                 <li>
                     <div class="news-post image-post2">
                         <div class="post-gallery">
-                            @foreach($ads as $ad)
                             <a href="{{$ad->link}}"  target="_blank"><img style="width: 368px; height: 300px" src="{{asset('page/images/image2/'.$ad->image2)}}" alt=""></a>
-                            @endforeach
                         </div>
                     </div>
                 </li>
+                @endforeach
             </ul>
         </div>
     </div>
