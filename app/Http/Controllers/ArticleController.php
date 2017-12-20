@@ -40,7 +40,6 @@ class ArticleController extends Controller
             'category' => 'required',
             'description' => 'required',
             'content' => 'required',
-            'thumbnail' => 'required',
         ],
         [
             'title.required' => 'Title is required',
@@ -121,6 +120,8 @@ class ArticleController extends Controller
     {
         $deleteArticle = Article::find($id);
         $deleteArticle ->delete();
+        $oldfile = $deleteArticle->thumbnail;
+        Storage::delete($oldfile);
         return redirect()->route('list-articles');
     }
 }

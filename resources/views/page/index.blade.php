@@ -30,18 +30,18 @@
             </ul>
         </div>
         @if(isset($articles))
-            @foreach($article_couser as $article)
+            @foreach($article_couser as $art)
                 <div class="news-post image-post default-size nxp">
-                <img src="{{asset('page/images/thumbnail/'.$article->thumbnail)}}" alt="">
+                <img src="{{asset('page/images/thumbnail/'.$art->thumbnail)}}" alt="">
                 <div class="hover-box">
                     <div class="inner-hover">
-                        <a class="category-post travel" href="{{ url('category/'.$article->category->alias) }}">{{ $article->category->name}}</a>
-                        <h2><a href="{{ url('news/'.$article->alias) }}">{{$article->title}}</a></h2>
+                        <a class="category-post travel" href="{{ url('category/'.$art->category->alias) }}">{{ $art->category->name}}</a>
+                        <h2><a href="{{ url('news/'.$art->alias) }}">{{$art->title}}</a></h2>
                         <ul class="post-tags">
-                            <li><i class="fa fa-clock-o"></i><span>{{ $article->created_at->format('d-M-Y') }}</span></li>
-                            <li><i class="fa fa-eye"></i>{{$article->view}}</li>
+                            <li><i class="fa fa-clock-o"></i><span>{{ $art->created_at->format('d-M-Y') }}</span></li>
+                            <li><i class="fa fa-eye"></i>{{$art->view}}</li>
                         </ul>
-                        <p>{{ $article-> description}}</p>
+                        <p>{{ $art-> description}}</p>
                     </div>
                 </div>
             </div>
@@ -73,26 +73,26 @@
                             <div class="owl-carousel" data-num="3">
                                 @if(isset($category->articles))
                                     @if(count($category->articles)<=10)
-                                        @foreach($category->articles->sortbyDesc('id') as $article)
+                                        @foreach($category->articles->sortbyDesc('id') as $art)
                                             <div class="item news-post image-post3 nxp_is_category">
-                                                <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
+                                                <img src="page/images/thumbnail/{{ $art->thumbnail }}" alt="">
                                                 <div class="hover-box">
-                                                    <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article->title}}</a></h2>
+                                                    <h2><a href="{{ url('news/'.$art->alias) }}">{{ $art->title}}</a></h2>
                                                     <ul class="post-tags">
-                                                        <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
-                                                        <li><i class="fa fa-eye"></i>{{$article->view}}</li>
+                                                        <li><i class="fa fa-clock-o"></i>{{ $art->created_at->format('d-M-Y') }}</li>
+                                                        <li><i class="fa fa-eye"></i>{{$art->view}}</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         @endforeach
                                     @else
-                                    @foreach($category->articles->sortbyDesc('id')->take(10) as $article)
+                                    @foreach($category->articles->sortbyDesc('id')->take(10) as $art)
                                         <div class="item news-post image-post3 nxp_is_category">
-                                            <img src="page/images/thumbnail/{{ $article->thumbnail }}" alt="">
+                                            <img src="page/images/thumbnail/{{ $art->thumbnail }}" alt="">
                                             <div class="hover-box">
-                                                <h2><a href="{{ url('news/'.$article->alias) }}">{{ $article->title}}</a></h2>
+                                                <h2><a href="{{ url('news/'.$art->alias) }}">{{ $art->title}}</a></h2>
                                                 <ul class="post-tags">
-                                                    <li><i class="fa fa-clock-o"></i>{{ $article->created_at->format('d-M-Y') }}</li>
+                                                    <li><i class="fa fa-clock-o"></i>{{ $art->created_at->format('d-M-Y') }}</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -111,39 +111,63 @@
                             <span>Advertisement</span>
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                                 <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
+                                <div class="carousel-inner" role="listbox">
+                                    @php $first = true; @endphp
                                     @foreach($ads as $ad)
-                                    <div class="item active">
-                                        <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
-                                    </div>
+                                        @if($first)
+                                            <div class="item active">
+                                                <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
+                                            </div>
+                                            @php $first = false @endphp
+                                        @else
+                                            <div class="item">
+                                                <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
+                                            </div>
+                                        @endif
                                     @endforeach
-                                </div>
+                                  </div>
                             </div>
                         </div>
                         <div class="tablet-advert">
                             <span>Advertisement</span>
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                                 <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
+                                <div class="carousel-inner" role="listbox">
+                                    @php $first = true; @endphp
                                     @foreach($ads as $ad)
-                                    <div class="item active">
-                                        <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
-                                    </div>
+                                        @if($first)
+                                            <div class="item active">
+                                                <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
+                                            </div>
+                                            @php $first = false @endphp
+                                        @else
+                                            <div class="item">
+                                                <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
+                                            </div>
+                                        @endif
                                     @endforeach
-                                </div>
+                                  </div>
                             </div>
                         </div>
                         <div class="mobile-advert">
                             <span>Advertisement</span>
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                                 <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
+                                <div class="carousel-inner" role="listbox">
+                                    @php $first = true; @endphp
                                     @foreach($ads as $ad)
-                                    <div class="item active">
-                                        <a href="{{$ad->link}}" target="_blank"><img style="width: 368px; height: 300px" src="{{asset('page/images/image2/'.$ad->image2)}}" alt="368 x 300"></a>
-                                    </div>
+                                        @if($first)
+                                            <div class="item active">
+                                                <a href="{{$ad->link}}" target="_blank"><img style="width: 368px; height: 300px" src="{{asset('page/images/image2/'.$ad->image2)}}" alt="368 x 300"></a>
+                                            </div>
+                                            @php $first = false @endphp
+                                        @else
+                                            <div class="item">
+                                                <a href="{{$ad->link}}" target="_blank"><img style="width: 368px; height: 300px" src="{{asset('page/images/image2/'.$ad->image2)}}" alt="368 x 300"></a>
+                                            </div>
+                                        @endif
                                     @endforeach
-                                </div>
+                                  </div>
                             </div>
                         </div>
                     </div>
@@ -170,7 +194,7 @@
                                             <img src="{{asset('page/images/thumbnail/'.$all->thumbnail)}}" alt="">
                                         </div>
                                         <div class="post-title">
-                                            <h2><a href=" {{url('news/'.$all->alias)}} ">{{$all->title}}</a></h2>
+                                            <h2 style="height: 40px; width: 100%;"><a href=" {{url('news/'.$all->alias)}} ">{{$all->title}}</a></h2>
                                             <ul class="post-tags">
                                                 <li><i class="fa fa-clock-o"></i>{{$all->created_at->format('d-M-Y')}}</li>
                                                 <li><i class="fa fa-user"></i>by <a href="#">{{ $all->User->username }}</a></li>

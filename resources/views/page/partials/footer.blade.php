@@ -41,9 +41,9 @@
                     <div class="widget categories-widget">
                         <h1>Hot Categories</h1>
                         <ul class="category-list">
-                            @foreach($categories as $category)
+                            @foreach($categories as $cate)
                             <li>
-                                <a href="{{url('category/'.$category->alias) }}">{{$category->name}} <span>{{$category->articles->count()}}</span></a>
+                                <a href="{{url('category/'.$cate->alias) }}">{{$cate->name}} <span>{{$cate->articles->count()}}</span></a>
                             </li>
                             @endforeach
                         </ul>

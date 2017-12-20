@@ -69,13 +69,21 @@
                         <span>Advertisement</span>
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
+                            <div class="carousel-inner" role="listbox">
+                                @php $first = true; @endphp
                                 @foreach($ads as $ad)
-                                <div class="item active">
-                                    <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
-                                </div>
+                                    @if($first)
+                                        <div class="item active">
+                                            <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
+                                        </div>
+                                        @php $first = false @endphp
+                                    @else
+                                        <div class="item">
+                                            <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
+                                        </div>
+                                    @endif
                                 @endforeach
-                            </div>
+                              </div>
                         </div>
                     </div>
                     <div class="tablet-advert">
@@ -83,10 +91,18 @@
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
+                                @php $first = true; @endphp
                                 @foreach($ads as $ad)
-                                <div class="item active">
-                                    <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
-                                </div>
+                                    @if($first)
+                                        <div class="item active">
+                                            <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
+                                        </div>
+                                        @php $first = false @endphp
+                                    @else
+                                        <div class="item">
+                                            <a href="{{$ad->link}}" target="_blank"><img style="width: 728px; height: 90px" src="{{asset('page/images/image1/'.$ad->image1)}}" alt="728 x 90"></a>
+                                        </div>
+                                    @endif
                                 @endforeach
                             </div>
                         </div>
@@ -103,8 +119,8 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
                         <li ><a class="home" href="{{url('/')}}">Home</a></li>
-                        @foreach($categories as $category)
-                            <li ><a class="home" href="{{url('category/'.$category->alias)}}">{{$category->name}}</a></li>
+                        @foreach($categories as $cate)
+                            <li ><a class="home" href="{{url('category/'.$cate->alias)}}">{{$cate->name}}</a></li>
                         @endforeach
                     </ul>
                     <form class="navbar-form navbar-right" role="search" action="{{url('search')}}" method="get">
