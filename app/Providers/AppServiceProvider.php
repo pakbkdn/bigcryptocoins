@@ -22,12 +22,19 @@ class AppServiceProvider extends ServiceProvider
            $categories = Category::all();
            View::share('categories', $categories);
        }
-       if (\Schema::hasTable('Articles'))
+       if (\Schema::hasTable('articles'))
        {
-           $mostview = Article::orderBy('view', 'desc')->limit(7)->get();
-           $article_random = Article::all()->random(3);
-           View::share('mostview',$mostview);
-           View::share('article_random',$article_random);
+           if(count(Article::all())>0){
+               $mostview = Article::orderBy('view', 'desc')->limit(7)->get();
+               $article_random = Article::all()->random(3);
+               View::share('mostview',$mostview);
+               View::share('article_random',$article_random);
+           }else{
+               $mostview = array();
+               $article_random = array();
+               View::share('mostview',$mostview);
+               View::share('article_random',$article_random);
+           }
        }
        if (\Schema::hasTable('ads'))
        {

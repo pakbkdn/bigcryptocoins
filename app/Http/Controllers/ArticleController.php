@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Article;
 use App\Category;
 use Auth;
+use Intervention\Image\ImageManagerStatic as Image;
 use Toastr;
 use Illuminate\Support\Facades\Storage;
 
@@ -40,6 +41,7 @@ class ArticleController extends Controller
             'category' => 'required',
             'description' => 'required',
             'content' => 'required',
+            'thumbnail' => 'required|max:2000'
         ],
         [
             'title.required' => 'Title is required',
@@ -48,6 +50,7 @@ class ArticleController extends Controller
             'description.required' => 'Description is required',
             'content.required' => 'Content is required',
             'thumbnail.required' => 'Thumbnail is required',
+            'thumbnail.max' => 'Limit size is 2000kb'
         ]
     );
         $addArticle = new Article;
@@ -59,11 +62,18 @@ class ArticleController extends Controller
         $addArticle ->user_id = Auth::id();
         if($rq->hasFile('thumbnail'))
         {
+            // $filename = $file->getClientOriginalName('thumbnail');
+            // $file = $rq->file('thumbnail');
+            // $images = time()."_".$filename;
+            // $destinationPath = public_path('/page/images/thumbnail');
+            // $addArticle->thumbnail = $images;
+            // $file->move($destinationPath, $images);
+
             $file = $rq->file('thumbnail');
             $filename = $file->getClientOriginalName('thumbnail');
-            $images = time()."_".$filename;
             $destinationPath = public_path('/page/images/thumbnail');
-            $file->move($destinationPath, $images);
+            $images = time()."_".$filename;
+            $thumbnail = Image::make($file)->resize(300,300)->save(public_path('page/images/thumbnail/').$images);
             $addArticle->thumbnail = $images;
         }
         $addArticle ->hot = $rq->input('hot');
