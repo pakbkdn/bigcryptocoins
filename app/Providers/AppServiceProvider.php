@@ -24,8 +24,16 @@ class AppServiceProvider extends ServiceProvider
        }
        if (\Schema::hasTable('Articles'))
        {
-           $mostview = Article::orderBy('view', 'desc')->limit(7)->get();
-           $article_random = Article::all()->random(3);
+           if(\Schema::hasTable('Articles')
+           {
+               $mostview = Article::orderBy('view', 'desc')->limit(7)->get();
+           } else {
+               $mostview = array();
+           }
+
+           // $article_random = Article::all()->random(3);
+
+           $article_random = array();
            View::share('mostview',$mostview);
            View::share('article_random',$article_random);
        }
