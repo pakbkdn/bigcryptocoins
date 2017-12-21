@@ -11,7 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
         $this->call(CategoriesTableSeeder::class);
         $this->call(ArticlesTableSeeder::class);
     }
@@ -46,12 +45,12 @@ class ArticlesTableSeeder extends Seeder
     public function run()
     {
         DB::table('articles')->insert([
-            ['title'=> 'ICO Analysis: Experty1', 'alias'=> 'ico-analysis-experty1',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'1'],
-            ['title'=> 'ICO Analysis: Experty2', 'alias'=> 'ico-analysis-experty2',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'2'],
-            ['title'=> 'ICO Analysis: Experty3', 'alias'=> 'ico-analysis-experty3',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'3'],
-            ['title'=> 'ICO Analysis: Experty4', 'alias'=> 'ico-analysis-experty4',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'4'],
-            ['title'=> 'ICO Analysis: Experty5', 'alias'=> 'ico-analysis-experty5',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'5'],
-            ['title'=> 'ICO Analysis: Experty6', 'alias'=> 'ico-analysis-experty6',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'6']
+            ['title'=> 'ICO Analysis: Experty1', 'alias'=> 'ico-analysis-experty1',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'1', 'created_at' => '2017-12-04 00:00:00'],
+            ['title'=> 'ICO Analysis: Experty2', 'alias'=> 'ico-analysis-experty2',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'2', 'created_at' => '2017-12-04 00:00:00'],
+            ['title'=> 'ICO Analysis: Experty3', 'alias'=> 'ico-analysis-experty3',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'3', 'created_at' => '2017-12-04 00:00:00'],
+            ['title'=> 'ICO Analysis: Experty4', 'alias'=> 'ico-analysis-experty4',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'4', 'created_at' => '2017-12-04 00:00:00'],
+            ['title'=> 'ICO Analysis: Experty5', 'alias'=> 'ico-analysis-experty5',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'5', 'created_at' => '2017-12-04 00:00:00'],
+            ['title'=> 'ICO Analysis: Experty6', 'alias'=> 'ico-analysis-experty6',	'description'=> 'SFaf',	'content'=> 'dfhxh', 'hot'=> '1', 'view' => '0', 'thumbnail'=>	'1512720051_u5duevtx1cdknqndxqdsb2knqekzknj_1680x8400-15-11-2017-21-01-17.jpg',	'hot'=> '1', 'category_id'=>'6', 'created_at' => '2017-12-04 00:00:00']
         ]);
     }
 }

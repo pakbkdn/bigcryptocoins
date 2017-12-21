@@ -77,18 +77,20 @@
         <div class="tab-content">
             <div class="tab-pane active" id="option1">
                 <ul class="list-posts">
-                    @foreach($mostview as $most)
-                    <li>
-                        <img src="{{asset('page/images/thumbnail/'.$most->thumbnail)}}" alt="">
-                        <div class="post-content">
-                            <h2><a href="{{url('news/'.$most->alias)}}">{{$most->title}}</a></h2>
-                            <ul class="post-tags">
-                                <li><i class="fa fa-clock-o"></i>{{$most->created_at->format('d-M-Y')}}</li>
-                                <li><i class="fa fa-eye"></i>{{$most->view}}</li>
-                            </ul>
-                        </div>
-                    </li>
-                    @endforeach
+                    @if(isset($mostview))
+                        @foreach($mostview as $most)
+                        <li>
+                            <img src="{{asset('page/images/thumbnail/'.$most->thumbnail)}}" alt="">
+                            <div class="post-content">
+                                <h2><a href="{{url('news/'.$most->alias)}}">{{$most->title}}</a></h2>
+                                <ul class="post-tags">
+                                    <li><i class="fa fa-clock-o"></i>{{$most->created_at->format('d-M-Y')}}</li>
+                                    <li><i class="fa fa-eye"></i>{{$most->view}}</li>
+                                </ul>
+                            </div>
+                        </li>
+                        @endforeach
+                    @endif
                 </ul>
             </div>
         </div>
