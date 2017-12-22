@@ -26,7 +26,11 @@ class AppServiceProvider extends ServiceProvider
        {
            if(count(Article::all())>0){
                $mostview = Article::orderBy('view', 'desc')->limit(7)->get();
-               $article_random = Article::all()->random(3);
+               if(count(Article::all())>3){
+                   $article_random = Article::all()->random(3);
+               } else{
+                   $article_random = Article::all();
+               }
                View::share('mostview',$mostview);
                View::share('article_random',$article_random);
            }else{
