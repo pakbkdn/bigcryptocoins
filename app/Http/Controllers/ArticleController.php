@@ -62,19 +62,19 @@ class ArticleController extends Controller
         $addArticle ->user_id = Auth::id();
         if($rq->hasFile('thumbnail'))
         {
-            // $filename = $file->getClientOriginalName('thumbnail');
-            // $file = $rq->file('thumbnail');
-            // $images = time()."_".$filename;
-            // $destinationPath = public_path('/page/images/thumbnail');
-            // $addArticle->thumbnail = $images;
-            // $file->move($destinationPath, $images);
-
             $file = $rq->file('thumbnail');
-            $filename = $file->getClientOriginalName('thumbnail');
-            $destinationPath = public_path('/page/images/thumbnail');
+            $filename = $file->getClientOriginalName('thumbnail');         
             $images = time()."_".$filename;
-            $thumbnail = Image::make($file)->resize(300,300)->save(public_path('page/images/thumbnail/').$images);
+            $destinationPath = base_path('/page/images/thumbnail');
             $addArticle->thumbnail = $images;
+            $file->move($destinationPath, $images);
+
+            // $file = $rq->file('thumbnail');
+            // $filename = $file->getClientOriginalName('thumbnail');
+            // $destinationPath = base_path('page/images/thumbnail');
+            // $images = time()."_".$filename;
+            // $thumbnail = Image::make($file)->resize(300,300)->save(base_path('page/images/thumbnail/').$images);
+            // $addArticle->thumbnail = $images;
         }
         $addArticle ->hot = $rq->input('hot');
         $addArticle ->save();
@@ -115,7 +115,7 @@ class ArticleController extends Controller
             $file = $rq->file('thumbnail');
             $filename = $file->getClientOriginalName('thumbnail');
             $images = time()."_".$filename;
-            $destinationPath = public_path('/page/images/thumbnail');
+            $destinationPath = base_path('/page/images/thumbnail');
             $file->move($destinationPath, $images);
             $oldfile = $editArticle->thumbnail;
             Storage::delete($oldfile);

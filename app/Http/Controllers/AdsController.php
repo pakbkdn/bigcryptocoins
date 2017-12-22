@@ -42,7 +42,7 @@ class AdsController extends Controller
             $file = $rq->file('image1');
             $filename = $file->getClientOriginalName('image1');
             $images = time()."_".$filename;
-            $destinationPath = public_path('/page/images/image1');
+            $destinationPath = base_path('/page/images/image1');
             $file->move($destinationPath, $images);
             $ads['image1'] = $images;
         }
@@ -51,7 +51,7 @@ class AdsController extends Controller
             $file2 = $rq->file('image2');
             $filename2 = $file2->getClientOriginalName('image2');
             $images2 = time()."_".$filename2;
-            $destinationPath2 = public_path('/page/images/image2');
+            $destinationPath2 = base_path('/page/images/image2');
             $file2->move($destinationPath2, $images2);
             $ads['image2'] = $images2;
         }
@@ -87,7 +87,7 @@ class AdsController extends Controller
             $file = $rq->file('image1');
             $filename = $file->getClientOriginalName('image1');
             $images = time()."_".$filename;
-            $destinationPath = public_path('/page/images/image1');
+            $destinationPath = base_path('/page/images/image1');
             $file->move($destinationPath, $images);
             $oldfile = $ads->image1;
             Storage::delete($oldfile);
@@ -99,7 +99,7 @@ class AdsController extends Controller
             $file2 = $rq->file('image2');
             $filename2 = $file2->getClientOriginalName('image2');
             $images2 = time()."_".$filename2;
-            $destinationPath2 = public_path('/page/images/image2');
+            $destinationPath2 = base_path('/page/images/image2');
             $file2->move($destinationPath2, $images2);
             $oldfile2 = $ads->image2;
             Storage::delete($oldfile2);

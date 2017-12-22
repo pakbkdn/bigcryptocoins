@@ -28,7 +28,7 @@
                                     <a href="url('news/'.$random->alias)"><img src="{{asset('page/images/thumbnail/'.$random->thumbnail)}}" alt=""></a>
                                     <div class="post-content">
                                         <a href="{{ url('category/'.$random->category->alias) }}">{{$random->category->name}}</a>
-                                        <h2><a href="{{url('news/'.$random->alias)}}">{{$random->name}}</a></h2>
+                                        <h2><a href="{{url('news/'.$random->alias)}}">{{$random->title}}</a></h2>
                                         <ul class="post-tags">
                                             <li><i class="fa fa-clock-o"></i>{{$random->created_at->format('d-m-y')}}</li>
                                         </ul>
