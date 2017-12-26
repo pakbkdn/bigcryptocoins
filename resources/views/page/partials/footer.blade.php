@@ -56,7 +56,7 @@
         </div>
         <div class="footer-last-line">
             <div class="row">
-                <div class="col-md-offset-4 col-md-4">
+                <div class="col-md-offset-4 col-md-4" style="text-align: center;">
                     <p>&copy; COPYRIGHT 2017 bigcryptocoins.com</p>
                 </div>                
             </div>
