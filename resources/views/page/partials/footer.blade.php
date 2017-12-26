@@ -28,7 +28,7 @@
                                     <a href="url('news/'.$random->alias)"><img src="{{asset('page/images/thumbnail/'.$random->thumbnail)}}" alt=""></a>
                                     <div class="post-content">
                                         <a href="{{ url('category/'.$random->category->alias) }}">{{$random->category->name}}</a>
-                                        <h2><a href="{{url('news/'.$random->alias)}}">{{$random->name}}</a></h2>
+                                        <h2><a href="{{url('news/'.$random->alias)}}">{{$random->title}}</a></h2>
                                         <ul class="post-tags">
                                             <li><i class="fa fa-clock-o"></i>{{$random->created_at->format('d-m-y')}}</li>
                                         </ul>
@@ -56,19 +56,9 @@
         </div>
         <div class="footer-last-line">
             <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; COPYRIGHT 2015 hotmagazine.com</p>
-                </div>
-                <div class="col-md-6">
-                    <nav class="footer-nav">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="index.html">Purchase Theme</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <div class="col-md-offset-4 col-md-4" style="text-align: center;">
+                    <p>&copy; COPYRIGHT 2017 bigcryptocoins.com</p>
+                </div>                
             </div>
         </div>
     </div>

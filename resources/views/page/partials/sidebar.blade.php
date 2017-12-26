@@ -1,7 +1,7 @@
 <!-- sidebar -->
 <div class="sidebar">
     <div class="widget features-slide-widget">
-        <div class="">
+        <div class="widget">
             <script type="text/javascript">
                 baseUrl = "https://widgets.cryptocompare.com/";
                 var scripts = document.getElementsByTagName("script");
@@ -12,12 +12,27 @@
                 var s = document.createElement("script");
                 s.type = "text/javascript";
                 s.async = true;
-                var theUrl = baseUrl+'serve/v1/coin/multi?fsyms=BTC,ETH,USDT,XRP,LTC&tsyms=USD,EUR,BTC';
+                var theUrl = baseUrl+'serve/v1/coin/chart?fsym=BTC&tsym=USD';
                 s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
                 embedder.parentNode.appendChild(s);
                 })();
             </script>
-        </div>
+            <script type="text/javascript">
+                baseUrl = "https://widgets.cryptocompare.com/";
+                var scripts = document.getElementsByTagName("script");
+                var embedder = scripts[ scripts.length - 1 ];
+                (function (){
+                var appName = encodeURIComponent(window.location.hostname);
+                if(appName==""){appName="local";}
+                var s = document.createElement("script");
+                s.type = "text/javascript";
+                s.async = true;
+                var theUrl = baseUrl+'serve/v1/coin/multi?fsyms=BTC,ETH,LTC,DASH,USDT&tsyms=USD,EUR,BTC';
+                s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                embedder.parentNode.appendChild(s);
+                })();
+            </script>
+        </div>            
         <div class="title-section">
             <h1><span>Advertisement</span></h1>
         </div>
@@ -40,28 +55,13 @@
         <blockquote cite="https://www.facebook.com/bigcryptocoins/" class="fb-xfbml-parse-ignore">
             <a href="https://www.facebook.com/bigcryptocoins/">Bigcryptocoins</a>
         </blockquote>
-    </div>
-    <script type="text/javascript">
-        baseUrl = "https://widgets.cryptocompare.com/";
-        var scripts = document.getElementsByTagName("script");
-        var embedder = scripts[ scripts.length - 1 ];
-        (function (){
-        var appName = encodeURIComponent(window.location.hostname);
-        if(appName==""){appName="local";}
-        var s = document.createElement("script");
-        s.type = "text/javascript";
-        s.async = true;
-        var theUrl = baseUrl+'serve/v1/coin/chart?fsym=BTC&tsym=USD';
-        s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
-        embedder.parentNode.appendChild(s);
-        })();
-    </script>
+    </div>    
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) return;
           js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.11&appId=222636254944151';
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=383631515421126';
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
