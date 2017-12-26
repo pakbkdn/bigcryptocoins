@@ -8,7 +8,9 @@
         <link rel="icon" href="{{asset('page/images/logo.ico')}}" type="image/x-icon">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+        <meta property="fb:app_id" content="197093787521715"/>
+        <meta property="fb:admins" content="100001766660706"/>
+        @yield('meta-share')
     	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic' rel='stylesheet' type='text/css'>
     	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 

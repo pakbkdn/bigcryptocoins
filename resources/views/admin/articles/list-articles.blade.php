@@ -23,6 +23,7 @@
                                 <th>Category</th>
                                 <th>Thumbnail</th>
                                 <th>Views</th>
+                                <th>Author</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -35,6 +36,7 @@
                                     <td><a href="{{url('administrator/category/'.$article->category->id)}}">{{ $article ->Category->name }}</a></td>
                                     <td><img src="{{asset('public/page/images/thumbnail/'.$article->thumbnail)}}" alt="{{ $article ->title }}" style="width: 70px; height: 50px;"> </td>
                                     <td>{{ $article ->view }}</td>
+                                    <td>{{$article -> User ->username}}</td>
                                     <td class="center"><a href="{{ url('administrator/article/edit-article') }}/{{$article->id}}"><span class="glyphicon glyphicon-edit"></span></a> </td>
                                     <td class="center"><a href="{{url('administrator/article/delete-article')}}/{{$article->id}}" onclick="return confirm('Are you sure ?');"><span class="glyphicon glyphicon-trash"></span></a> </td>
                                 </tr>
