@@ -121,7 +121,8 @@
                                         <div class="autor-box">
                                             <div class="autor-content">
                                                 <div class="autor-title">
-                                                    <h1><span>{{$article->User->username}}</span><a href="autor-details.html">{{$article->User->articles->count()}} Posts</a></h1>
+                                                    <h1><span>{{$article->User->username}}</span>
+                                                        {{$article->User->articles->count()}} Posts</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -151,7 +152,7 @@
                             <!-- carousel box -->
                             <div class="carousel-box owl-wrapper">
                                 <div class="title-section">
-                                    <h1><span>Relative news</span></h1>
+                                    <h1><span>Related news</span></h1>
                                 </div>
                                 <div class="owl-carousel" data-num="3">
                                     @foreach($relatives as $re)
