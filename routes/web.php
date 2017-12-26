@@ -15,6 +15,9 @@ Route::get('/', 'PageController@getIndex')->name('home');
 Route::get('category/{category}', 'PageController@getArticle');
 Route::get('news/{title}', 'PageController@getDetail');
 Route::get('search', 'PageController@search');
+Route::get('policy',function(){
+	return view('policy');
+});
 Route::get('news/rander/public/save', 'PageController@updateArtisan');
 
 Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
