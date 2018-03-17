@@ -63,18 +63,12 @@ class ArticleController extends Controller
         if($rq->hasFile('thumbnail'))
         {
             $file = $rq->file('thumbnail');
-            $filename = $file->getClientOriginalName('thumbnail');         
+            $filename = $file->getClientOriginalName('thumbnail');
             $images = time()."_".$filename;
             $destinationPath = base_path('/page/images/thumbnail');
             $addArticle->thumbnail = $images;
             $file->move($destinationPath, $images);
-
-            // $file = $rq->file('thumbnail');
-            // $filename = $file->getClientOriginalName('thumbnail');
-            // $destinationPath = base_path('page/images/thumbnail');
-            // $images = time()."_".$filename;
-            // $thumbnail = Image::make($file)->resize(300,300)->save(base_path('page/images/thumbnail/').$images);
-            // $addArticle->thumbnail = $images;
+            
         }
         $addArticle ->hot = $rq->input('hot');
         $addArticle ->save();

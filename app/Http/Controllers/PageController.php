@@ -26,7 +26,7 @@ class PageController extends Controller
         $article_couser = Article::orderBy('id','desc')->take(8)->get();
         $article_hot = Article::where('hot',1)->orderBy('id', 'desc')->limit(3)->get();
         $article_top10 = Article::orderBy('id', 'desc')->limit(10)->get();
-        $article_all = Article::orderBy('id','desc')->paginate(6);
+        $article_all = Article::orderBy('id','desc')->limit(40)->paginate(6);
         return view('page.index', compact([ 'articles', 'article_couser', 'article_hot', 'article_top10', 'article_all','mostview' ]));
     }
 

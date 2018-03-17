@@ -18,7 +18,7 @@ Route::get('search', 'PageController@search');
 Route::get('policy',function(){
 	return view('policy');
 });
-Route::get('news/rander/public/save', 'PageController@updateArtisan');
+Route::get('news/rander/public/save', 'CourseController@updateArtisan');
 
 Route::group(['prefix'=>'administrator', 'middleware'=>'Login'],function(){
 	Route::get('/', 'AdminController@dashboard')->name('admin');
