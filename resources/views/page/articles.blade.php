@@ -13,7 +13,6 @@
                     <div class="title-section">
                         <h1><span class="world">{{$category->name}}</span></h1>
                     </div>
-
                     <div class="row$articles">
                         @if(isset($articles))
                         @foreach($articles as $art)

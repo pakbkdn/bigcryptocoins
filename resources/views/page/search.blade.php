@@ -12,8 +12,8 @@
                 <div class="grid-box">
                     <div class="title-section">
                         <h1><span class="world">result search</span></h1>
-                        <p>key word: {{$key}}</p>
-                        <p>tolal result: {{count($articles_sort)}}</p>
+                        <p>Result search for <span style="text-transform: uppercase;"><b>{{$key}}</b></span></p>
+                        <p>total result: {{count($articles_sort)}}</p>
                     </div>
 
                     <div class="row">
